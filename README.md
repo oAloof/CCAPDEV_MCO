@@ -4,7 +4,7 @@
 
 The following describes the features of a forum web application. Groups may choose to
 either design the forum web application as a general-interest forum or one that is more
-catered towards a specific interest group.
+catered towards a specific interest group. <br>
 Main Features:
 
 1. View All Posts
@@ -21,8 +21,6 @@ Main Features:
 12. Upvote / Downvote
 13. Search
 14. General
-
----
 
 # File Structure
 
