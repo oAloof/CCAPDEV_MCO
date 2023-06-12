@@ -22,7 +22,7 @@ Main Features:
 13. Search
 14. General
 
-# File Structure
+# Folder Structure
 
 ---
 
@@ -31,3 +31,7 @@ Main Features:
 **scripts/** - All JAVASCRIPT files will be stored here <br>
 **pages/** - All HTML files will be stored here <br>
 **styles/** - All CSS files will be stored here <br>
+
+# Important Links
+
+1. **Main Docs File:** https://docs.google.com/document/d/1kkZrYKmXqz5BnkQKxI51wZFvWp_vx8zjT2wbdc16eQ8/edit?usp=sharing
