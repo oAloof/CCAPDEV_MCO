@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>TITLE</title>
-    </head>
+<head>
+    <title>Login</title>
 
-    <body>
-        <div class="">
-            <img src="" >   
+    <link rel="stylesheet" href="..\bootstrap-5.3.0-dist\css\bootstrap.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="login-main-container">
+        <div id="login-header">
+            <img id="logo" src="../images/logo-placeholder.png">
+            <p>Sign in to Your Account</p>
         </div>
-    </body>
-
-
+        <div id="login-form-container">
+            <div id="inputs-container">
+                <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                <label for="floatingEmail">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
 </html>
