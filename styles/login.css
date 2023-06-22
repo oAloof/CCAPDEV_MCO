@@ -46,3 +46,13 @@ div#inputs-container {
     width: 320px;
     margin-top: 10%;
 }
+
+div#forgot-pw-cont {
+    display: flex;
+    justify-content: right;
+    margin-top: 2%;
+}
+
+a#forgot-pw {
+    font-size: 14px;
+}
