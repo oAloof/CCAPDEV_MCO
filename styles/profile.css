@@ -97,7 +97,10 @@ header {
 #profile-body {
     /* background-color: red; */
     display: flex;
+<<<<<<< Updated upstream
     justify-content: space-between;
+=======
+>>>>>>> Stashed changes
     border-style: dotted;
 
     margin: 1% 2% 0% 2%;
