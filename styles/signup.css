@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+
+div#login-main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25%;
+}
+
+div#login-header p {
+    margin-top: 0px;
+    font-family: "Rubik";
+    font-size: 25px;
+}
+
+img#logo {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+div#login-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3%;
+    width: 380px;
+    height: 370px;
+    border: 1px solid #bacddb;
+    background-color: #DDE6ED;
+    
+}
+
+div#inputs-container {
+    width: 320px;
+}
+
+div#forgot-pw-cont {
+    display: flex;
+    justify-content: right;
+    margin-top: 2%;
+    padding-bottom: 4%;
+}
+
+a#forgot-pw {
+    font-size: 14px;
+}
+
+div#login-footer {
+    margin-top: 5%;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #bacddb;
+    background-color: #DDE6ED;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#login-footer p {
+    margin-top: 15px;
+}
