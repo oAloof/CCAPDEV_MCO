@@ -85,39 +85,61 @@ header {
 }
 
 .sh-button {
-    padding: 15px 15px 5px 15px; 
+    padding: 15px 15px 4px 15px; 
     font-weight: bold;
 }
 
 .sh-button:hover {
-    border-style:double;
+    border-style: solid;
     border-bottom-color:#1e101d;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
 }
 
 #profile-body {
     /* background-color: red; */
     display: flex;
-<<<<<<< Updated upstream
     justify-content: space-between;
-=======
->>>>>>> Stashed changes
-    border-style: dotted;
 
     margin: 1% 2% 0% 2%;
+
 }
 
 #hotbar {
-    /* background-color: black; */
-    padding-right: 20%;
     border-radius: 1%;
     background-color: var(--clr-primary);
-    padding: 10px 15px 10px 15px;
-    padding-right: 775px;
 
+    padding: 1em 44em 1em 1.5em;
     margin-bottom: 10px;
+    border-radius: .5em;
 
-    border-style:double
+    border-style: solid;
+    border-color: var(--clr-secondary);
 
+    overflow:hidden;
+
+    resize:none;
+}
+
+.hotbar-button {
+    font-weight: bold;
+    background-color: var(--clr-primary);
+    margin-right: 10px;
+
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+}
+
+.hotbar-button:hover {
+    background-color: #b4bc5cce;
+}
+
+.hotbar-button--selected {
+    background-color: #b4bc5cce;
 }
 
 #profile-body-left {
@@ -126,18 +148,31 @@ header {
 
 #profile-body-right {
     margin: 0px;
-    padding-right: 125px;   
-    border-style: double;
-    padding-bottom: 10000px;
+    margin-right: 50px;
+    min-width: 290px;
+    max-width: 290px;
+    min-height: 500px;
+
+    border-style: solid;
+    border-radius: .5em;
+    background-color: var(--clr-primary);
+    border-color: var(--clr-secondary);
+
+    display:flex;
+
+    flex-direction: column;
 }
 
-.hotbar-button {
-    font-weight: bold;
-    background-color: yellow;
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 25%;
-    border-style:dotted
+#pbr-top-background {
+    background-color: var(--clr-accent);
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+    padding-right: 150px; 
+
+    margin: 0px;
+    min-width: 285px;
+    max-width: 287px;
+    min-height: 100px;
 }
 
 #search-form {
@@ -167,3 +202,4 @@ header {
 .post-preview {
     background-color: var(--clr-primary);
 }
+

@@ -111,8 +111,6 @@ header {
     font-family: var(--ff-base);
 }
 
-
-
 #content-container {
     background-color: var(--clr-secondary);
     padding: 1.5em 1em;
