@@ -138,10 +138,6 @@ header {
     background-color: #b4bc5cce;
 }
 
-.hotbar-button--selected {
-    background-color: #b4bc5cce;
-}
-
 #profile-body-left {
     margin-right:2%;
 }
@@ -175,6 +171,43 @@ header {
     min-height: 100px;
 }
 
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+#user-photo {
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+}
+
+#username {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#change-pic {
+    background-color: antiquewhite;
+    border-radius: 1em;
+    padding-right: 2em;
+    padding-left: 2em;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+#new-post {
+    background-color: antiquewhite;
+    border-radius: 1em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+
 #search-form {
     padding: 0 6px;
     background-color: var(--clr-primary);
@@ -202,4 +235,6 @@ header {
 .post-preview {
     background-color: var(--clr-primary);
 }
+
+
 
