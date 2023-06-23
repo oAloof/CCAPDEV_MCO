@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
+
 :root {
     --clr-text: #1e101d;
     --clr-surface: #f0f0f0;
@@ -5,7 +7,7 @@
     --clr-secondary: #ffffff;
     --clr-accent: #3e7075;
 
-    --ff-base: 'Inconsolata', monospace;
+    --ff-base: 'Open Sans', sans-serif;
     --ff-accent: 'Karla', sans-serif;
 }
 
