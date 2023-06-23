@@ -176,8 +176,6 @@ header {
     margin-left: auto;
 }
 
-
-
 #user-photo {
     border-radius: 50%;
     margin-right: auto;
@@ -200,12 +198,24 @@ header {
     margin-bottom: 5px;
 }
 
+#change-pic:hover {
+    background-color: rgba(250, 235, 215, 0.836);
+}
+
 #new-post {
     background-color: antiquewhite;
     border-radius: 1em;
     padding-right: 2em;
     padding-left: 2em;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
+
+#new-post:hover {
+    background-color: rgba(250, 235, 215, 0.836);
+}
+
+
 
 
 #search-form {
