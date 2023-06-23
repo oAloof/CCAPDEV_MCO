@@ -122,6 +122,8 @@ header {
     overflow:hidden;
 
     resize:none;
+
+    min-width: 1100px;
 }
 
 .hotbar-button {
