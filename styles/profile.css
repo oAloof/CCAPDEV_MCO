@@ -74,9 +74,7 @@ header {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    
-    /*padding: 15px; */
-    
+        
     padding-left: 10%;
     padding-right: 10%;
     
@@ -142,12 +140,59 @@ header {
     margin-right:2%;
 }
 
+#content-container {
+    margin-top: 5px;
+    background-color: var(--clr-primary);
+
+    margin-bottom: 10px;
+    border-radius: .2em;
+
+    overflow:hidden;
+
+    resize:none;
+
+    min-height:1000px;
+
+    border-style: solid;
+    border-color: var(--clr-secondary);
+}
+
+.content-post {
+    background-color:#aab069;    
+    display:flex;
+    border-radius: .2em;
+
+}
+
+.content-post:hover {
+    border-style: solid;
+    border-color: var(--clr-secondary);
+    border-radius: 0em;
+}
+
+.vote {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-image {
+
+    margin-left: 10px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+    width: 100px;
+    height: 70px;
+    border-radius: .2em;
+}
+
 #profile-body-right {
     margin: 0px;
     margin-right: 50px;
     min-width: 290px;
     max-width: 290px;
     min-height: 500px;
+    max-height: 500px;
 
     border-style: solid;
     border-radius: .5em;
@@ -155,8 +200,9 @@ header {
     border-color: var(--clr-secondary);
 
     display:flex;
-
     flex-direction: column;
+
+    background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent) 20%);
 }
 
 #pbr-top-background {
@@ -174,19 +220,28 @@ header {
 .center {
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
 }
 
 #user-photo {
     border-radius: 50%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 50px;
     width: 100px;
     height: 100px;
+    border-color: #1e101d;
+    border-style: solid;
+    border-width: 3px;
 }
 
 #username {
     font-weight: bold;
     font-size: 20px;
+}
+
+#user-tag {
+    font-size: 13px;
 }
 
 #change-pic {
@@ -215,9 +270,6 @@ header {
     background-color: rgba(250, 235, 215, 0.836);
 }
 
-
-
-
 #search-form {
     padding: 0 6px;
     background-color: var(--clr-primary);
@@ -233,13 +285,6 @@ header {
 #search::placeholder {
     color: var(--clr-secondary);
     font-family: var(--ff-base);
-}
-
-
-
-#content-container {
-    background-color: var(--clr-secondary);
-    padding: 1.5em 1em;
 }
 
 .post-preview {
