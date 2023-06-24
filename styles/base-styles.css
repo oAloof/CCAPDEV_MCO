@@ -87,13 +87,40 @@ header {
     font-family: var(--ff-base);
 }
 
-
-
 #content-container {
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-primary);
     padding: 1.5em 1em;
 }
 
+#filter-container {
+    display: flex;
+    margin: 10px 0;
+}
+
+.filter {
+    background-color: var(--clr-accent);
+    border-radius: 15%;
+    color: var(--clr-secondary);
+    padding: 6px 8px;
+    margin-right: 2px;
+}
+
 .post-preview {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-secondary);
+    padding: 0.5em 1em;
+}
+
+.post-title {
+    font-size: 1.75em;
+    font-weight: 700;
+}
+
+.post-author {
+    line-height: 5px;
+    margin-bottom: 5px;
+}
+
+.post-content {
+    font-size: 1.25em;
+    line-height: 1.5em;
 }
