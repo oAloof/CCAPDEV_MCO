@@ -75,6 +75,13 @@ header {
     min-width: 1300px;
 }
 
+img#logo {
+    height: 60px;
+    width: 124px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
 #profile-subheader {
     box-sizing: border-box;
     display: flex;
@@ -194,6 +201,11 @@ header {
     border-radius: .2em;
 }
 
+.post-title {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 #profile-body-right {
 
 }
@@ -299,8 +311,8 @@ header {
 #new-post {
     background-color: antiquewhite;
     border-radius: 1em;
-    padding-right: 5.5em;
-    padding-left: 5.5em;
+    padding-right: 5em;
+    padding-left: 5em;
     margin-top: 2px;
     margin-bottom: 5px;
 
@@ -332,5 +344,21 @@ header {
     background-color: var(--clr-primary);
 }
 
+#top-button {
+    background-color: antiquewhite;
+    border-radius: 1em;
+
+    max-width: 200px;
+
+    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+
+    font-weight: bold;
+}
+
+#top-button:hover {
+    background-color: rgba(250, 235, 215, 0.836);
+}
 
 
