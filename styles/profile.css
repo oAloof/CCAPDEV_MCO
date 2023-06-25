@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
+
 :root {
     --clr-text: #1e101d;
     --clr-surface: #f0f0f0;
     --clr-primary: #aab069;
-    --clr-secondary: #ffffff;
-    --clr-accent: #3e7075;
+    --clr-secondary: #747c38;
+    --clr-accent1: #005b4b;
+    --clr-accent2: #f2f3cc;
 
-    --ff-base: 'Inconsolata', monospace;
-    --ff-accent: 'Karla', sans-serif;
+    --ff-base: 'Open Sans', sans-serif;
+    --ff-accent: 'Rubik', sans-serif;
 }
 
 *,
@@ -53,9 +56,9 @@ a, a:link , a:visited {
 
 .button {
     font-family: var(--ff-accent);
-    border: none;
-    background-color: var(--clr-accent);
-    color: var(--clr-secondary);
+    border: 1px solid var(--clr-secondary);
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
 }
 
 header {
@@ -210,7 +213,7 @@ header {
     display:flex;
     flex-direction: column;
 
-    background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent) 20%);
+    background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent1) 20%);
 }
 
 #trophy-box {
@@ -240,7 +243,7 @@ header {
 }
 
 #pbr-top-background {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-primary);
     border-top-left-radius: .2em;
     border-top-right-radius: .2em;
     padding-right: 150px; 

@@ -4,8 +4,9 @@
     --clr-text: #1e101d;
     --clr-surface: #f0f0f0;
     --clr-primary: #aab069;
-    --clr-secondary: #ffffff;
-    --clr-accent: #3e7075;
+    --clr-secondary: #747c38;
+    --clr-accent1: #005b4b;
+    --clr-accent2: #f2f3cc;
 
     --ff-base: 'Open Sans', sans-serif;
     --ff-accent: 'Rubik', sans-serif;
@@ -41,8 +42,8 @@ div#login-header p {
 }
 
 img#logo {
-    height: 150px;
-    width: 150px;
+    height: 180px;
+    width: 310px;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
@@ -93,5 +94,5 @@ div#login-footer p {
 }
 
 button#submit-btn {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent1);
 }

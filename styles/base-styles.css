@@ -25,10 +25,13 @@
     outline: none;
 }
 
-img {
-    max-width: 100%;
-    float: left;
-    margin-right: 1em;
+img#logo {
+    position: absolute;
+    left: -5px;
+    height: 70px;
+    width: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 body {
