@@ -11,6 +11,11 @@
     --ff-accent: 'Rubik', sans-serif;
 }
 
+body {
+    background-color: var(--clr-surface);
+    color: var(--clr-text);
+}
+
 div#login-main-container {
     display: flex;
     align-items: center;
@@ -31,7 +36,7 @@ div#login-header {
 
 div#login-header p {
     margin-top: 0px;
-    font-family: "Rubik";
+    font-family: var(--ff-base);
     font-size: 25px;
 }
 
@@ -50,8 +55,8 @@ div#login-form-container {
     border-radius: 3%;
     width: 380px;
     height: 370px;
-    border: 1px solid #bacddb;
-    background-color: #DDE6ED;
+    border: 1px solid var(--clr-secondary);
+    background-color: var(--clr-primary);
     
 }
 
@@ -75,8 +80,8 @@ div#login-footer {
     height: 50px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #bacddb;
-    background-color: #DDE6ED;
+    border: 1px solid var(--clr-secondary);
+    background-color: var(--clr-primary);
 
     display: flex;
     justify-content: center;
@@ -85,4 +90,8 @@ div#login-footer {
 
 div#login-footer p {
     margin-top: 15px;
+}
+
+button#submit-btn {
+    background-color: var(--clr-accent);
 }
