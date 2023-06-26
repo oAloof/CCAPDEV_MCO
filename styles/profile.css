@@ -180,6 +180,7 @@ img#logo {
 }
 
 .content-post {
+    padding-top: 5px;
     background-color:#aab069;    
     display:flex;
     border-radius: .2em;
@@ -387,4 +388,17 @@ img#logo {
     background-color: rgba(250, 235, 215, 0.836);
 }
 
+.hotbar-new {
+    background-image: url("..\images\DSC01400.JPG");
+}
+
+.vote-button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    border-color: #1e101d;
+    border-style: solid;
+    border-width: 1px;
+}
 
