@@ -227,6 +227,12 @@ img#logo {
     font-weight: bold;
 }
 
+.post-bottom-buttons {
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
 #profile-box {
     margin: 0px;
     margin-right: 50px;
