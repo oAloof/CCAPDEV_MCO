@@ -93,7 +93,7 @@ img#logo {
     background-color: var(--clr-primary);
     border-bottom: 3px solid var(--clr-secondary);
 
-    min-width: 1300px;
+    min-width: 1400px;
 }
 
 .sh-button {
@@ -152,6 +152,12 @@ img#logo {
     background-color: #b4bc5cce;
 }
 
+.hotbar-button-logo {
+    width: 7%;
+    height: 7%;
+    border-radius: 50%;
+}
+
 #profile-body-left {
     margin-right:2%;
 }
@@ -201,13 +207,24 @@ img#logo {
     border-radius: .2em;
 }
 
+.post-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .post-title {
     margin-top: 5px;
     font-weight: bold;
 }
 
-#profile-body-right {
+.post-text-bottom-row {
+    display: flex;
+    font-size: 12px;
 
+}
+
+.post-source {
+    font-weight: bold;
 }
 
 #profile-box {
@@ -235,6 +252,9 @@ img#logo {
     max-width: 290px;
     min-height: 100px;
 
+    padding-top: 3px;
+    padding-left: 8px;
+
     border-style: solid;
     border-radius: .5em;
     background-color: var(--clr-primary);
@@ -244,8 +264,8 @@ img#logo {
     flex-direction: column;
 }
 
-#trophy-text {
-    margin: 10px 0px 0px 15px;
+#trophy-box {
+    margin: 10px 0px 0px 0px;
     font-weight: bold;
 }
 
