@@ -26,10 +26,13 @@
     outline: none;
 }
 
-img {
-    max-width: 100%;
-    float: left;
-    margin-right: 1em;
+img#logo {
+    position: absolute;
+    left: -5px;
+    height: 140px;
+    width: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 body {
@@ -107,6 +110,23 @@ img#logo {
     border-right-color: transparent;
     border-left-color: transparent;
     border-top-color: transparent;
+}
+
+#search-form {
+    padding: 0 6px;
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-accent2);
+}
+
+#search {
+    border: none;
+    background-color: var(--clr-primary);
+    color: var(--clr-accent2);
+}
+
+#search::placeholder {
+    color: var(--clr-accent2);
+    font-family: var(--ff-base);
 }
 
 #profile-body {

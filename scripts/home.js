@@ -44,34 +44,34 @@ Dicta quae repudiandae unde fugit non minima accusamus modi! Enim blanditiis rem
 ratione explicabo, reprehenderit sunt minus doloribus corporis.")]
 
 $(document).ready(function() {
-    for (let post of posts) {
-        let post_preview  = post.generatePreview();
-        $("#content-container").append(post_preview);
-    }
+    // for (let post of posts) {
+    //     let post_preview  = post.generatePreview();
+    //     $("#content-container").append(post_preview);
+    // }
 
-    $("#greeting").text(`Hello, ${currentUser.first_name}!`);
+    // $("#greeting").text(`Hello, ${currentUser.first_name}!`);
 
-    $(".filter span").click(function() {
-        $(this).parent().remove();
-    });
+    // $(".filter span").click(function() {
+    //     $(this).parent().remove();
+    // });
 
-    $("#add-filter-btn").click(function(e) {
-        e.preventDefault();
-        displayNewFilter($("#add-filter").val());
-        $("#add-filter").val('');
-    });
+    // $("#add-filter-btn").click(function(e) {
+    //     e.preventDefault();
+    //     displayNewFilter($("#add-filter").val());
+    //     $("#add-filter").val('');
+    // });
 
-    $(".post-content b").click(function() {
-        window.location.href = "./post.html"
-    });
+    // $(".post-content b").click(function() {
+    //     window.location.href = "./post.html"
+    // });
 
-    // CUSTOM FUNCTIONS
+    // // CUSTOM FUNCTIONS
 
-    function displayNewFilter(filter_name) {
-        let filter_main = document.createElement("div");
-        filter_main.setAttribute("class", "filter");
-        filter_main.innerHTML = `${filter_name} <span>X</span>`;
+    // function displayNewFilter(filter_name) {
+    //     let filter_main = document.createElement("div");
+    //     filter_main.setAttribute("class", "filter");
+    //     filter_main.innerHTML = `${filter_name} <span>X</span>`;
 
-        $("#filter-container").append(filter_main);
-    };
+    //     $("#filter-container").append(filter_main);
+    // };
 })
