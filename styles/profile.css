@@ -208,30 +208,8 @@ img#logo {
     border-radius: .2em;
 }
 
-.post-text {
-    display: flex;
-    flex-direction: column;
-}
+#profile-body-right {
 
-.post-title {
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-.post-text-bottom-row {
-    display: flex;
-    font-size: 12px;
-
-}
-
-.post-source {
-    font-weight: bold;
-}
-
-.post-bottom-buttons {
-    font-size: 12px;
-    margin-top: 8px;
-    font-weight: bold;
 }
 
 #profile-box {
