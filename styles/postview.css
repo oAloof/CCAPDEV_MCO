@@ -563,6 +563,7 @@ img#logo {
 
 .right-align {
     float: right;
+    margin-right: 15px;
 }
 
 #bottom-box {
@@ -571,6 +572,8 @@ img#logo {
     border-width: 1px;
     border-radius: 5px;
     border-color: var(--clr-secondary);
+
+    min-height: 390px;
 }
 
 #create-post-text {
