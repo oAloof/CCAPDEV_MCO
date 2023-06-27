@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="..\bootstrap-5.3.0-dist\css\bootstrap.css">
     <link rel="stylesheet" href="../styles/base-styles.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -22,22 +21,64 @@
             </svg>
         </form>
         <div>
-            <a id="link-register" href="">Register</a>
+            <a id="link-register" href="../pages/signup.html">Register</a>
             <span>or</span>
-            <button class="button" id="link-login">Login</button>
+            <button class="btn btn-primary" id="login-btn">Login</button>
         </div>
     </header>
-    <article class="wrapper flow">
-        <div id="greeting">Hello, user!</div>
-        <form id="filter-form">
-            <input type="text" name="add-filter" id="add-filter">
-            <input type="submit" class="button" value="Add Filter" id="add-filter-btn">
-        </form>
-        <div id="filter-container">
-            <div class="filter">For You <span>X</span></div>
-            <div class="filter">Trending <span>X</span></div>
+
+    <div id="home-main-cont">
+        <div id="posts-main-cont">
+            <div id="hotbar">
+                <span class = "hotbar-button">
+                    <span id="hb-new">*img*</span>
+                    <span>New</span>
+                </span>
+    
+                <span class = "hotbar-button">
+                    <span id="hb-hot">*img*</span>
+                    <span>Hot</span>
+                </span>
+    
+                <span class = "hotbar-button">
+                    <span id="hb-top">*img*</span>
+                    <span>Top</span>
+                </span>
+            </div>
+
+            <div class="post">
+                <img class="post-thumbnail" src="../images/weird-cat.jpg">
+
+            </div>
+
+            <div class="post">
+                <img class="post-thumbnail" src="../images/weird-cat.jpg">
+
+            </div>
+            <div class="post">
+                <img class="post-thumbnail" src="../images/weird-cat.jpg">
+
+            </div>
+            <div class="post">
+                <img class="post-thumbnail" src="../images/weird-cat.jpg">
+
+            </div>
+            <div class="post">
+                <img class="post-thumbnail" src="../images/weird-cat.jpg">
+
+            </div>
         </div>
-        <div id="content-container"></div>
-    </article>
+
+        <div id="right-side-cont">
+            <div id="trending-posts-cont">
+            </div>
+    
+            </div id="top-users-cont">
+            </div>
+
+
+        </div>
+    </div>
+
 </body>
 </html>

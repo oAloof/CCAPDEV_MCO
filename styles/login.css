@@ -58,7 +58,6 @@ div#login-form-container {
     height: 300px;
     border: 1px solid var(--clr-secondary);
     background-color: var(--clr-primary);
-    
 }
 
 div#inputs-container {
@@ -98,5 +97,14 @@ div#login-footer p {
 }
 
 button#submit-btn {
+    background-color: var(--clr-accent1);
+}
+
+button#submit-btn:hover {
+    background-color: var(--clr-accent2);
+    color: var(--clr-text);
+}
+
+button#submit-btn:active {
     background-color: var(--clr-accent1);
 }
