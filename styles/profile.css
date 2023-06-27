@@ -29,6 +29,7 @@
 img#logo {
     position: absolute;
     left: -5px;
+    bottom: -35px;
     height: 140px;
     width: auto;
     margin-bottom: 0px;
@@ -78,30 +79,25 @@ header {
     min-width: 1300px;
 }
 
-img#logo {
-    height: 60px;
-    width: 124px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
 #profile-subheader {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-        
-    padding-left: 10%;
-    padding-right: 10%;
+    
+
+    padding: 10px;
     
     background-color: var(--clr-primary);
     border-bottom: 3px solid var(--clr-secondary);
 
     min-width: 1400px;
+    max-height: 40px;
+    overflow: hidden;
 }
 
 .sh-button {
-    padding: 15px 15px 4px 15px; 
     font-weight: bold;
+    margin-left: 30px;
 }
 
 .sh-button:hover {
@@ -129,53 +125,81 @@ img#logo {
     font-family: var(--ff-base);
 }
 
+a#link-register {
+    color: var(--clr-text);
+    font-family: var(--ff-base);
+    font-size: 16px;
+}
+
+button#login-btn {
+    color: var(--clr-accent2);
+    background-color: var(--clr-accent1);
+    font-family: var(--ff-base);
+    font-size: 16px;
+}
+
+button#login-btn:hover {
+    background-color: var(--clr-accent2);
+    color: var(--clr-text);
+}
+
+button#login-btn:active {
+    background-color: var(--clr-accent1);
+}
+
 #profile-body {
-    /* background-color: red; */
     display: flex;
     justify-content: space-between;
 
     margin: 1% 2% 0% 2%;
-
 }
 
 #hotbar {
+    display: flex;
+    align-items: center;
     border-radius: 1%;
     background-color: var(--clr-primary);
 
-    padding: 1em 44em 1em 1.5em;
-    margin-bottom: 10px;
-    border-radius: .5em;
+    margin-bottom: 20px;
+    border-radius: 10px;
 
-    border-style: solid;
-    border-color: var(--clr-secondary);
+    border: 2px solid var(--clr-text);
+
+    height: 40px;
+    width: 100%;
+    min-height: 40px;
+    min-width: 545px;
 
     overflow:hidden;
-
     resize:none;
-
-    min-width: 1100px;
 }
 
 .hotbar-button {
     font-weight: bold;
     background-color: var(--clr-primary);
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 80rm;
 
-    padding: 0.5em 1em;
-    margin: 0.25em;
+    padding: 5px;
+    margin: 5px;
     border-radius: 1em;
     border: none;
     outline: none;
+
+    font-family: var(--clr-primary);
+    font-size: 14   px;
+    color: var(--clr-accent2);
 }
 
 .hotbar-button:hover {
     background-color: #b4bc5cce;
 }
 
-.hotbar-button-logo {
-    width: 7%;
-    height: 7%;
-    border-radius: 50%;
+.hotbar-button:active {
+    background-color: #b4bc5cce;
 }
 
 #profile-body-left {
@@ -187,34 +211,41 @@ img#logo {
     background-color: var(--clr-primary);
 
     margin-bottom: 10px;
-    border-radius: .2em;
+    border-radius: 10px;
 
     overflow:hidden;
 
     resize:none;
 
     min-height: 90px;
+    min-width: 1000px;
 
+    border-width: 2px;
     border-style: solid;
-    border-color: var(--clr-secondary);
+    border-color: var(--clr-text);
 }
 
 .content-post {
+    margin: 5px;
     padding-top: 5px;
     background-color:#aab069;    
     display:flex;
     border-radius: .2em;
+    min-width: 90px;
 }
 
 .content-post:hover {
     border-style: solid;
-    border-color: var(--clr-secondary);
+    border-width: 2px;
+    border-color: var(--clr-accent2);
     border-radius: 0em;
 }
 
 .vote {
     margin-left: 5px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -257,8 +288,9 @@ img#logo {
     min-height: 500px;
     max-height: 500px;
 
+    border-width: 2px;
     border-style: solid;
-    border-color: var(--clr-secondary);
+    border-color: var(--clr-text);
     border-radius: .5em;
 
     display:flex;
@@ -277,10 +309,11 @@ img#logo {
     padding-top: 3px;
     padding-left: 8px;
 
+    border-width: 2px;
     border-style: solid;
-    border-radius: .5em;
+    border-radius: 10px;
     background-color: var(--clr-primary);
-    border-color: var(--clr-secondary);
+    border-color: var(--clr-text);
 
     display:flex;
     flex-direction: column;
@@ -333,6 +366,7 @@ img#logo {
 
 #user-tag {
     font-size: 13px;
+    margin-bottom: 5px;
 }
 
 #change-pic {
