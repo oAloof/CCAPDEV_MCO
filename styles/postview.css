@@ -568,7 +568,6 @@ img#logo {
 }
 
 #bottom-box {
-
     box-sizing: border-box;
 
     background-color:#aab069;
@@ -584,6 +583,30 @@ img#logo {
     font-size: 20px;
 }
 
-#create-post-text {
-    font-size: 20px;
+#choose-community {
+    background-color:#aab069;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--clr-secondary);
+
+    margin-bottom: 10px;
+
+    width: 300px;
+
+    padding: 5px 5px 5px 10px;
+}
+
+#choose-community-pic {
+    border-style: dotted;
+    border-radius: 50%;
+    border-width: 1px;
+    padding: 1px 12px 1px 12px;
+    margin-right: 5px;
+
+}
+
+#choose-community-text {
+    font-size: 13px;
 }
