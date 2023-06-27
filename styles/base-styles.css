@@ -215,7 +215,6 @@ div#home-main-cont {
     flex-direction: row;
 
     justify-content: center;
-    align-items: center;
     padding: 20px;
     height: 100%;
     width: 100%;
@@ -253,12 +252,17 @@ div.post {
     height: auto;
     width: 95%;
     min-height: 140px;
-    max-height: 220px;
+    max-height: 225px;
 
     border-radius: 8px;
     border: 2px solid var(--clr-text);
     background-color: var(--clr-accent2);
     overflow: hidden;
+}
+
+div.post:hover {
+    background-color: var(--clr-secondary);
+    border: 2px solid var(--clr-accent2);
 }
 
 div.post-left-cont {
@@ -269,7 +273,7 @@ div.post-left-cont {
     height: auto;
     width: 8%;
     min-height: 140px;
-    max-height: 220px;
+    max-height: 225px;
 }
 
 div.post-upvote img{
@@ -298,7 +302,7 @@ div.post-right-cont {
     flex-direction: column;
     height: 100%;
     width: 92%;
-    max-height: 220px;
+    max-height: 225px;
     padding-left: 10px;
 }
 
@@ -319,6 +323,7 @@ div.post-title {
 
 div.post-title h5{
     font-size: 15px;
+    color: var(--clr-text);
 }
 
 div.post-content-cont {
@@ -339,21 +344,53 @@ div.post-actions {
 div.post-actions span{
     display: flex;
     flex-direction: row;
+    align-items: center;
     font-size: 12px;
     padding: 5px;
+}
+
+img.post-icons {
+    height: 12px;
+    width: auto;
+    margin: 2px;
 }
 
 div#right-main-cont {
     display: flex;
     flex-direction: column;
+    align-content: first baseline;
 
-    margin-left: 20px;
+    margin-left: 70px;
     height: 100%;
     width: 25%;
-    border: 2px solid var(--clr-secondary);
-    border-radius: 1em;
-    padding: 20px;
+    
+}
+
+div#trending-topics-cont {
+    background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent1) 20%);
+    height: 200px;
+
+    border: 2px solid var(--clr-text);
+    border-radius: 10px;
+    padding: 0px;
     background-color: var(--clr-primary);
+    margin-bottom: 40px;
+}
+
+div#top-users-cont {
+    background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent1) 20%);
+    height: 200px;
+
+    border: 2px solid var(--clr-text);
+    border-radius: 10px;
+    padding: 0px;
+    background-color: var(--clr-primary);
+}
+
+div.topic-title {
+    margin: 5px;
+    color: var(--clr-accent2);
+    font-size: 16px;
 }
 
 
