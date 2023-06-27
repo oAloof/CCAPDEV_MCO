@@ -405,9 +405,14 @@ img#logo {
     padding-left: 15px;
 }
 
-.hr {
+#hr1 {
     margin-top: 10px;
     padding-bottom: 20px;
+}
+
+#hr2 {
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 #header {
@@ -572,7 +577,7 @@ img#logo {
     border-radius: 5px;
     border-color: var(--clr-secondary);
 
-    min-height: 390px;   
+    min-height: 385px;   
 }
 
 #create-post-text {
