@@ -210,6 +210,11 @@ button#login-btn:active {
     background-color: #b4bc5cce;
 }
 
+img.hotbar-icons {
+    height: 14px;
+    width: 14px;
+}
+
 div#home-main-cont {
     display: flex;
     flex-direction: row;
