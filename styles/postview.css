@@ -580,3 +580,16 @@ img#logo {
     font-size: 20px;
 }
 
+#bottom-box {
+    background-color:#aab069;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--clr-secondary);
+
+    min-height: 390px;
+}
+
+#create-post-text {
+    font-size: 20px;
+}
