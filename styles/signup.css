@@ -1,5 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
 
+:root {
+    --clr-text: #1e101d;
+    --clr-surface: #f0f0f0;
+    --clr-primary: #aab069;
+    --clr-secondary: #747c38;
+    --clr-accent1: #005b4b;
+    --clr-accent2: #f2f3cc;
+
+    --ff-base: 'Open Sans', sans-serif;
+    --ff-accent: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--clr-surface);
+    color: var(--clr-text);
+}
 
 div#login-main-container {
     display: flex;
@@ -21,13 +37,13 @@ div#login-header {
 
 div#login-header p {
     margin-top: 0px;
-    font-family: "Rubik";
+    font-family: var(--ff-base);
     font-size: 25px;
 }
 
 img#logo {
-    height: 150px;
-    width: 150px;
+    height: 180px;
+    width: 310px;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
@@ -40,8 +56,8 @@ div#login-form-container {
     border-radius: 3%;
     width: 380px;
     height: 370px;
-    border: 1px solid #bacddb;
-    background-color: #DDE6ED;
+    border: 1px solid var(--clr-secondary);
+    background-color: var(--clr-primary);
     
 }
 
@@ -65,8 +81,8 @@ div#login-footer {
     height: 50px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #bacddb;
-    background-color: #DDE6ED;
+    border: 1px solid var(--clr-secondary);
+    background-color: var(--clr-primary);
 
     display: flex;
     justify-content: center;
@@ -75,4 +91,17 @@ div#login-footer {
 
 div#login-footer p {
     margin-top: 15px;
+}
+
+button#submit-btn {
+    background-color: var(--clr-accent1);
+}
+
+button#submit-btn:hover {
+    background-color: var(--clr-accent2);
+    color: var(--clr-text);
+}
+
+button#submit-btn:active {
+    background-color: var(--clr-accent1);
 }
