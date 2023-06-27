@@ -97,12 +97,9 @@ img#logo {
 }
 
 #profile-body {
-    /* background-color: red; */
     display: flex;
     justify-content: space-between;
-
     margin: 1% 2% 0% 2%;
-
 }
 
 #hotbar {
@@ -236,6 +233,7 @@ img#logo {
     border-style: solid;
     border-color: var(--clr-secondary);
     border-radius: .5em;
+    border-width: 3px;
 
     display:flex;
     flex-direction: column;
@@ -407,9 +405,14 @@ img#logo {
     padding-left: 15px;
 }
 
-.hr {
+#hr1 {
     margin-top: 10px;
     padding-bottom: 20px;
+}
+
+#hr2 {
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 
 #header {
@@ -423,22 +426,18 @@ img#logo {
 }
 
 .header-cell {
-    min-width: 175px;
+    min-width: 173.5px;
     border-style:solid;
     padding-top: 13px;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
     padding-bottom: 10px;
     border-width: 1px;
 }
 
 .header-cell-left {
-    min-width: 175px;
+    min-width: 173.5px;
     border-style:solid;
     padding-top: 13px;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
     padding-bottom: 10px;
     border-width: 1px;
@@ -451,11 +450,9 @@ img#logo {
 }
 
 .header-cell-right {
-    min-width: 175px;
+    min-width: 173.5px;
     border-style:solid;
     padding-top: 13px;
-    margin-right: auto;
-    margin-left: auto;
     text-align: center;
     padding-bottom: 10px;
     border-width: 1px;
@@ -537,8 +534,11 @@ img#logo {
 .pill {
     background-color: antiquewhite;
     border-radius: 1em;
-    padding-right: 2em;
-    padding-left: 2em;
+
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
 
     font-weight: bold;
     border-style: solid;
@@ -547,9 +547,10 @@ img#logo {
     margin-bottom: 5px;
     margin-right: 3px;
     margin-left: 3px;
+}
 
-    padding-top: 3px;
-    padding-bottom: 3px;
+.pill:hover {
+    background-color: rgba(250, 235, 215, 0.836);
 }
 
 #tags {
@@ -567,29 +568,45 @@ img#logo {
 }
 
 #bottom-box {
+    box-sizing: border-box;
+
     background-color:#aab069;
     border-style: solid;
-    border-width: 1px;
+    border-width: 3px;
     border-radius: 5px;
     border-color: var(--clr-secondary);
 
-    min-height: 390px;
+    min-height: 385px;   
 }
 
 #create-post-text {
     font-size: 20px;
 }
 
-#bottom-box {
+#choose-community {
     background-color:#aab069;
     border-style: solid;
-    border-width: 1px;
+    border-width: 3px;
     border-radius: 5px;
+    border-style: solid;
     border-color: var(--clr-secondary);
 
-    min-height: 390px;
+    margin-bottom: 10px;
+
+    width: 300px;
+
+    padding: 5px 5px 5px 10px;
 }
 
-#create-post-text {
-    font-size: 20px;
+#choose-community-pic {
+    border-style: dotted;
+    border-radius: 50%;
+    border-width: 1px;
+    padding: 1px 12px 1px 12px;
+    margin-right: 5px;
+
+}
+
+#choose-community-text {
+    font-size: 13px;
 }
