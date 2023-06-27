@@ -173,7 +173,7 @@ img#logo {
 
     resize:none;
 
-    min-height: 400px;
+    min-height: 90px;
 
     border-style: solid;
     border-color: var(--clr-secondary);
@@ -184,7 +184,6 @@ img#logo {
     background-color:#aab069;    
     display:flex;
     border-radius: .2em;
-
 }
 
 .content-post:hover {
@@ -208,8 +207,21 @@ img#logo {
     border-radius: .2em;
 }
 
-#profile-body-right {
+.post-title {
+    font-weight: bold;
+}
 
+.post-text-bottom-row {
+    font-size: 13px;
+}
+
+.post-source {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.post-bottom-buttons {
+    font-size: 15px;
 }
 
 #profile-box {
