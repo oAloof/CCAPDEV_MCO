@@ -231,6 +231,10 @@ img#logo {
     font-weight: bold;
 }
 
+.post-text {
+    padding-left: 10px;
+}
+
 .post-text-bottom-row {
     font-size: 13px;
 }
