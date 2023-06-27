@@ -26,12 +26,6 @@
     outline: none;
 }
 
-img {
-    max-width: 100%;
-    float: left;
-    margin-right: 1em;
-}
-
 body {
     font-family: var(--ff-base);
     color: var(--clr-text);
@@ -77,8 +71,11 @@ header {
 }
 
 img#logo {
-    height: 60px;
-    width: 124px;
+    position: absolute;
+    left: -5px;
+    bottom: -15px;
+    height: 80px;
+    width: auto;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
