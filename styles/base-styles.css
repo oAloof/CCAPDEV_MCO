@@ -166,7 +166,7 @@ button#login-btn:active {
     margin-bottom: 10px;
     border-radius: 5px;
 
-    border: 3px solid var(--clr-secondary);
+    border: 2px solid var(--clr-secondary);
 
     height: 40px;
     width: 100%;
@@ -193,7 +193,7 @@ button#login-btn:active {
     outline: none;
 
     font-family: var(--clr-primary);
-    font-size: 14px;
+    font-size: 14   px;
     color: var(--clr-accent2);
 }
 
@@ -231,7 +231,7 @@ div#posts-main-cont {
     min-height: 550px;
     min-width: 545px;
 
-    border: 3px solid var(--clr-secondary);
+    border: 2px solid var(--clr-secondary);
     border-radius: 5px;
     padding: 20px;
     height: 100%;
@@ -244,7 +244,7 @@ div.post {
     margin: 5px;
     height: 90px;
     width: 95%;
-    border: 3px solid var(--clr-secondary);
+    border: 2px solid var(--clr-secondary);
 }
 
 img.post-thumbnail {
@@ -261,7 +261,7 @@ div#right-main-cont {
     margin-left: 20px;
     height: 100%;
     width: 25%;
-    border: 3px solid var(--clr-secondary);
+    border: 2px solid var(--clr-secondary);
     border-radius: 1em;
     padding: 20px;
     background-color: var(--clr-primary);
