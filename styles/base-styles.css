@@ -34,6 +34,7 @@ span.bold-text {
 img#logo {
     position: absolute;
     left: -5px;
+    bottom: -38px;
     height: 140px;
     width: auto;
     margin-bottom: 0px;
@@ -208,6 +209,11 @@ button#login-btn:active {
 
 .hotbar-button:active {
     background-color: #b4bc5cce;
+}
+
+img.hotbar-icons {
+    height: 14px;
+    width: 14px;
 }
 
 div#home-main-cont {
