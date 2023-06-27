@@ -537,8 +537,11 @@ img#logo {
 .pill {
     background-color: antiquewhite;
     border-radius: 1em;
-    padding-right: 2em;
-    padding-left: 2em;
+
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
 
     font-weight: bold;
     border-style: solid;
@@ -547,9 +550,10 @@ img#logo {
     margin-bottom: 5px;
     margin-right: 3px;
     margin-left: 3px;
+}
 
-    padding-top: 3px;
-    padding-bottom: 3px;
+.pill:hover {
+    background-color: rgba(250, 235, 215, 0.836);
 }
 
 #tags {
@@ -573,7 +577,7 @@ img#logo {
     border-radius: 5px;
     border-color: var(--clr-secondary);
 
-    min-height: 390px;
+    min-height: 390px;    
 }
 
 #create-post-text {
