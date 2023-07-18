@@ -15,7 +15,8 @@
             <p><span class="bold-text">{{{ forum }}}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{{ username }}}</a> 6 days ago</p>
         </div>
         <div class="post-title">
-            <a href="post-view.html"><h5 class="bold-text">{{{ title }}}</h5></a>
+            {{! TODO: Change this link to a '/post/:id' }}
+            <a href="posts/{{{ _id }}}"><h5 class="bold-text">{{{ title }}}</h5></a>
         </div>
         <div class="post-content-cont">
             {{{ content }}}
