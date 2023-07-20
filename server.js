@@ -30,8 +30,9 @@ async function main() {
     app.use('/posts', postRouter);
 
     app.listen(3000, () => {
-        console.log("Express app now listening...");
+        console.log("Express app now listening...")
         mongoose.connect('mongodb://0.0.0.0/posts')
+        console.log("Connected to database.")
     });
 }
 

@@ -9,6 +9,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', async (req, res) => {
     const post = await Post.findById(req.params.id).lean().exec()
     if (post == null) res.redirect('/')
+    // TODO: render dynamic post views
     res.send("Success!")
 })
 

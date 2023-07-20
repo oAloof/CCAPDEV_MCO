@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const postSchema = new mongoose.Schema({
     votes: {
-        type: Number,
+        type: Number, 
         default: 0
     },
     forum: {

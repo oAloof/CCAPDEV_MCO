@@ -10,6 +10,24 @@ router.get('/', async (req, res) => {
     })
 })
 
+router.post('/', async (req, res) => {
+    const posts = await Post.find().lean().exec()
+    res.render('home', {
+        title: "Convo - Homepage",
+        posts: posts
+    })
+})
+
+router.get('/login', (req, res) => {
+    res.render('login', { layout: false })
+})
+
+router.get('/signup', (req, res) => {
+    res.render('signup', { layout: false })
+})
+
+// TEMPORARY CODE: REMOVE ALL LINES BELOW THIS 
+// (except module.export)
 router.get('/db', (req, res) => {
     res.render('temp', { post: new Post() })
 })
