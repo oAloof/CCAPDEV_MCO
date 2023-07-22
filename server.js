@@ -36,4 +36,11 @@ async function main() {
     });
 }
 
+/** TODO-LIST:
+ *  Implement function to calculate difference from posting date to Date.now
+ *  - need this for "XX days ago" in post blocks
+ *  Implement the search functionality
+ *  Implement the vote arrow functions
+ *  - should change the value on site and in mongoDB as well
+ */
 main();

@@ -5,7 +5,7 @@ const Post = require('../db/models/post.js')
 router.get('/', async (req, res) => {
     const posts = await Post.find().lean().exec()
     res.render('home', {
-        title: "Convo - Homepage",
+        title: 'Convo - Homepage',
         posts: posts
     })
 })
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const posts = await Post.find().lean().exec()
     res.render('home', {
-        title: "Convo - Homepage",
+        title: 'Convo - Homepage',
         posts: posts
     })
 })

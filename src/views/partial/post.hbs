@@ -4,7 +4,7 @@
             <img src="../images/upvote-icon.png" alt="upvote">
         </div>
         <div class="post-vote-ctr">
-            {{{ votes }}}
+            {{ votes }}
         </div>
         <div class="post-downvote">
             <img src="../images/downvote-icon.png" alt="downvote">
@@ -12,13 +12,13 @@
     </div>
     <div class="post-right-cont">
         <div class="post-info-cont">
-            <p><span class="bold-text">{{{ forum }}}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{{ username }}}</a> 6 days ago</p>
+            <p><span class="bold-text">{{ forum }}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{ username }}</a> 6 days ago</p>
         </div>
         <div class="post-title">
-            <a href="posts/{{{ _id }}}"><h5 class="bold-text">{{{ title }}}</h5></a>
+            <a href="posts/{{ _id }}"><h5 class="bold-text">{{ title }}</h5></a>
         </div>
         <div class="post-content-cont">
-            {{{ content }}}
+            {{ content }}
         </div>
         <div class="post-actions">
             <span class="post-comments"><img class="post-icons" src="../images/comment-icon.png"> Comments</span>
