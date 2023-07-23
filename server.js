@@ -42,5 +42,7 @@ async function main() {
  *  Implement the search functionality
  *  Implement the vote arrow functions
  *  - should change the value on site and in mongoDB as well
+ *  Userpage hbs
+ *  - href in post.hbs
  */
 main();
