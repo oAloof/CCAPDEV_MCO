@@ -280,6 +280,10 @@ button#login-btn:active {
     font-size: 15px;
 }
 
+#comments {
+    color: var(--clr-text);
+}
+
 #profile-box {
     margin: 0px;
     margin-right: 50px;
@@ -299,15 +303,15 @@ button#login-btn:active {
     background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent1) 20%);
 }
 
-#trophy-box {
-    margin-top: 10px;
+#bio-box {
+    margin-top: 20px;
     margin-right: 50px;
     min-width: 290px;
     max-width: 290px;
     min-height: 100px;
 
-    padding-top: 3px;
-    padding-left: 8px;
+    padding-top: 6px;
+    padding-left: 10px;
 
     border-width: 2px;
     border-style: solid;
@@ -317,12 +321,16 @@ button#login-btn:active {
 
     display:flex;
     flex-direction: column;
-}
 
-#trophy-box {
-    margin: 10px 0px 0px 0px;
     font-weight: bold;
 }
+
+#bio-description {
+    font-weight: lighter;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
 
 #user-profile {
     margin: 0px;
@@ -393,6 +401,7 @@ button#login-btn:active {
     margin-bottom: 5px;
 
     font-weight: bold;
+    color: var(--clr-text);
 }
 
 #new-post:hover {
