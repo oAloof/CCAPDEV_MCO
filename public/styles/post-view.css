@@ -221,7 +221,6 @@ div.post-left-cont {
     height: auto;
     width: 8%;
     min-height: 140px;
-    max-height: 225px;
 }
 
 div.post-upvote img{
@@ -250,7 +249,6 @@ div.post-right-cont {
     flex-direction: column;
     height: 100%;
     width: 92%;
-    max-height: 225px;
     padding-left: 10px;
 }
 
@@ -277,14 +275,13 @@ div.post-title h5{
 div.post-content-cont {
     font-size: 13px;
     padding: 5px;
-    margin-bottom: 10px;
 }
 
 div.post-actions {
     display: flex;
     flex-direction: row;
     font-size: 12px;
-    margin-bottom: 10px;
+    
 }
 
 div.post-actions span{
