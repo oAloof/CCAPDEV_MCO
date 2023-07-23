@@ -12,7 +12,8 @@ router.get('/:id', async (req, res) => {
     // FIX: Make it so that the full text is seen
     res.render('posts/view', {
         title: post.title,
-        post: post
+        post: post,
+        layout: "post-view"
     })
 })
 
