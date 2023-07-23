@@ -1,0 +1,16 @@
+{{! Note to group: this page SHOULD BE DELETED eventually, 
+it's being used to insert values into MongoDB }}
+<br><br><br>
+<form action="/db" method="post">
+    <label>Votes: <input value="{{post.votes}}" type="number" name="votes" id="votes"></label>
+    <br>
+    <label>Forum: <input value="{{post.forum}}" type="text" name="forum" id="forum" required></label>
+    <br>
+    <label>Username: <input value="{{post.username}}" type="text" name="username" id="username" required></label>
+    <br>
+    <label>Title: <input value="{{post.title}}" type="text" name="title" id="title" required></label>
+    <br>
+    <label>Content: <textarea required name="content" id="content">{{post.content}}</textarea></label>
+    <br>
+    <input type="submit" value="Submit">
+</form>
