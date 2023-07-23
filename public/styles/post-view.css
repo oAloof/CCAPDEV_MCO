@@ -334,5 +334,48 @@ input.comment-submit-btn:hover {
     color: var(--clr-text);
 }
 
+div#comments-main-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 
+    padding: 5px;
+    margin: 5px;
+    height: auto;
+    width: 95%;
+}
+
+div.comment {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    margin: 5px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--clr-text);
+    background-color: var(--clr-accent2);
+}
+
+div#comment-info-cont {
+    margin: 0px;
+    color: var(--clr-text);
+    font-size: 14px;
+}
+
+div#comment-content-cont {
+    font-size: 15px;
+    padding: 5px;
+}
+
+div#comment-actions {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+img.comment-icons {
+    height: 16px;
+    width: auto;    
+}
 

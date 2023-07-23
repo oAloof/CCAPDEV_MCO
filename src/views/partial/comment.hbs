@@ -1,3 +1,18 @@
 <div class="comment">
-    
+    <div id="comment-info-cont">
+        <p><span class="bold-text">{{ author }}</span> · {{ date }}</p>
+    </div>
+
+    <div id="comment-content-cont">
+        {{ body }}
+    </div>
+
+    <div id="comment-actions">
+        <span class="comment-upvote"> 
+            <img class="post-icons" src="../images/upvote-icon.png" alt="upvote">
+            {{ votes }}
+            <img class="post-icons" src="../images/downvote-icon.png" alt="downvote">
+        </span>
+        {{!-- Maybe implement replying --}}
+    </div>
 </div>

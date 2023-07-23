@@ -17,4 +17,13 @@ router.get('/:id', async (req, res) => {
     })
 })
 
+router.post('/:id', async (req, res) => {
+    let comment = {author: "User", body: req.body.comment-area}
+
+    Post.findByIdAndUpdate(req.params.id,
+        { "$push": { "childrens": employee._id } },
+        { "new": true, "upsert": true },
+    );
+})
+
 module.exports = router;

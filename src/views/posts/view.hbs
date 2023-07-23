@@ -34,10 +34,10 @@
 
             {{!-- Form for creating a comment --}}
             <div class="create-comment-cont">
-                <form action="posts/{{ _id }}">
+                <form action="{{ _id }}">
                     <div class="mb-3">
                         <label for="comment-area" class="form-label">Comment</label>
-                        <textarea required class="form-control" id="comment-area" rows="3" placeholder="What are your thoughts?"></textarea>
+                        <textarea required name = "comment-area" class="form-control" id="comment-area" rows="3" placeholder="What are your thoughts?"></textarea>
                     </div>
                     <input class="btn btn-primary comment-submit-btn" type="submit" value="Comment">
                 </form>
