@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="..\bootstrap-5.3.0-dist\css\bootstrap.css">
+        <link rel="stylesheet" href="../styles/saved_posts.css">
+
+        <title>Convo - Profile - Saved Posts</title>
+    </head>
+    <body>
+        <header>
+            <a href="../pages/home.html">
+                <img id="logo" src="../images/ConvoLogo2.png">
+            </a>
+            <div id="div-for-layout"></div>
+
+            <form id="search-form" method="post">
+                <input type="text" name="search" id="search" placeholder="Search for post...">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f2f3cc" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </form>
+            <div>
+                <a id="link-register" href="../pages/signup.html">Register</a>
+                <span>or</span>
+                <a href="../pages/login.html"><button class="btn btn-primary" id="login-btn" href="">Login</button></a>
+            </div>
+        </header>
+        <div id="profile-subheader">
+            <div id="profile-subheader-buttons">
+                <span class="sh-button">OVERVIEW</span>
+                <span class="sh-button">POSTS</span>
+                <span class="sh-button">COMMENTS</span>
+                <span class="sh-button">HISTORY</span>
+                <span class="sh-button" id="saved">SAVED</span>
+                <span class="sh-button">HIDDEN</span>
+                <span class="sh-button">UPVOTED</span>
+                <span class="sh-button">DOWNVOTED</span>
+                <span class="sh-button">AWARDS RECEIVED</span>
+                <span class="sh-button">AWARDS GIVEN</span>
+            </div>
+        </div>
+        <div id="profile-body">
+            <div id="profile-body-left">
+                <div id="hotbar">
+                    <div id="hotbar-text">Saved Posts</div>
+                </div>
+
+                <div id="content-container">
+                    <div class="content-post">
+                        <div class="vote">
+                            <div class="center"><img src="../images/upvote-icon.png" class="vote-button"></div>
+                            <div class="number center">12</div>
+                            <div class="center"><img src="../images/downvote-icon.png" class="vote-button"></div>
+                        </div>
+                        <img src="#" class="post-image">
+                        <div class="post-text">
+                            <div class="post-title">
+                                Why do my stormtroopers always miss?
+                            </div> 
+                            <div class="post-text-bottom-row">
+                                <span class="post-source">
+                                    @StarWars •
+                                </span>
+                                <span>
+                                    &nbspPosted by
+                                </span>
+                                <span class="posting-user">
+                                    &nbspu/DarthVader
+                                </span>
+                                <span class="days-ago">
+                                    &nbsp6 days ago
+                                </span>
+                            </div>
+                            <div class="post-bottom-buttons">
+                                <a id="comments" href="../pages/post-view.html"><img src="">Comments</a>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="award"><img src="">Award</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="share"><img src="">Share</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="hide"><img src="">Hide</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="report"><img src="">Report</span>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-body-right">
+                <div id="profile-box">
+                    <div class="center"><img src="../images/users-pfp/darthvader.jpg" id="user-photo"></div>
+                    <div class="center" id="user-info">
+                        <div id="username" class="center">DarthVader</div>
+                        <div id="user-tag" class="center">u/DarthVader</div>
+                    </div>
+                    <div class="center" id="change-pic">Change Profile Picture</div>
+                    <a class="center" id="new-post" href="../pages/create_post_view.html">New Post</a>
+                </div>
+                <div id="bio-box">
+                    <span id="bio-title">About Me</span>
+                    <div id="bio-description">
+                        I am Darth Vader, previously known as Anakin Skywalker. I thought I needed a rebrand so this is my new profile.
+                    </div>
+                </div>
+                
+                <div id="top-button" class="center">
+                    Back to Top
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
