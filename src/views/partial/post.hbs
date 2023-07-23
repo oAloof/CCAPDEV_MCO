@@ -1,0 +1,29 @@
+<div class="post">
+    <div class="post-left-cont">
+        <div class="post-upvote">
+            <img src="../images/upvote-icon.png" alt="upvote">
+        </div>
+        <div class="post-vote-ctr">
+            {{ votes }}
+        </div>
+        <div class="post-downvote">
+            <img src="../images/downvote-icon.png" alt="downvote">
+        </div>
+    </div>
+    <div class="post-right-cont">
+        <div class="post-info-cont">
+            <p><span class="bold-text">{{ forum }}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{ username }}</a> 6 days ago</p>
+        </div>
+        <div class="post-title">
+            <a href="posts/{{ _id }}"><h5 class="bold-text">{{ title }}</h5></a>
+        </div>
+        <div class="post-content-cont">
+            {{ content }}
+        </div>
+        <div class="post-actions">
+            <span class="post-comments"><img class="post-icons" src="../images/comment-icon.png"> Comments</span>
+            <span class="post-share"> <img class="post-icons" src="../images/share-icon.png"> Share</span>
+            <span class="post-save"><img class="post-icons" src="../images/save-icon.png"> Save</span>
+        </div>
+    </div>
+</div>
