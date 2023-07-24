@@ -1,10 +1,16 @@
+// Packages
 const express = require('express')
-const { engine } = require('express-handlebars')
+const Handlebars = require('handlebars')
 const mongoose = require('mongoose')
+
+// Functions from Packages
+const { engine } = require('express-handlebars')
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
 
 async function main() {
     const app = express()
     app.use(express.urlencoded({ extended: false }))
+    app.use(express.json())
 
     // Static Links (for our stylesheets)
     app.use(express.static(__dirname + '/public'))
@@ -16,11 +22,10 @@ async function main() {
         layoutsDir: `${__dirname}/src/views/layout`,
         partialsDir: `${__dirname}/src/views/partial`,
         extname: 'hbs',
-        defaultLayout: 'index'
+        defaultLayout: 'index',
+        helpers: require('./src/views/handlebars-helpers').helpers,
+        handlebars: allowInsecurePrototypeAccess(Handlebars)
     }))
-
-    // DB Models
-    const Post = require(`${__dirname}/src/db/models/post.js`)
 
     // Routes
     const homeRouter = require('./src/routes/homeRouter.js')
@@ -31,18 +36,16 @@ async function main() {
 
     app.listen(3000, () => {
         console.log("Express app now listening...")
-        mongoose.connect('mongodb://0.0.0.0/posts')
+        mongoose.connect('mongodb://0.0.0.0/Forum')
         console.log("Connected to database.")
     });
 }
 
 /** TODO-LIST:
- *  Implement function to calculate difference from posting date to Date.now
- *  - need this for "XX days ago" in post blocks
- *  Implement the search functionality
  *  Implement the vote arrow functions
  *  - should change the value on site and in mongoDB as well
- *  Userpage hbs
+ *  Userpage HBS
  *  - href in post.hbs
+ *  Create Post HBS
  */
 main();

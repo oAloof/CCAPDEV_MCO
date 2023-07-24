@@ -15,7 +15,7 @@ const postSchema = new mongoose.Schema({
     },
     date: {
         type: Date,
-        default: Date.now
+        default: new Date()
     },
     title: {
         type: String,
@@ -25,7 +25,23 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    comments: [{ author: String, body: String, date: Date, votes: Number}]
+    comments: [{ 
+        author: { 
+            type: String,
+            default: 'Anonymous'
+        }, 
+        body: {
+            type: String,
+            required: true
+        }, 
+        date: {
+            type: Date,
+            default: new Date()
+        }, 
+        votes: {
+            type: Number,
+            default: 0
+        }}]
 })
 
 module.exports = mongoose.model('Post', postSchema)

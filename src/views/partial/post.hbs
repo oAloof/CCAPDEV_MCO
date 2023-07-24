@@ -1,18 +1,18 @@
 <div class="post">
-    <div class="post-left-cont">
+    <div class="post-left-cont upvote-btn">
         <div class="post-upvote">
             <img src="../images/upvote-icon.png" alt="upvote">
         </div>
         <div class="post-vote-ctr">
             {{ votes }}
         </div>
-        <div class="post-downvote">
+        <div class="post-downvote downvote-btn">
             <img src="../images/downvote-icon.png" alt="downvote">
         </div>
     </div>
     <div class="post-right-cont">
         <div class="post-info-cont">
-            <p><span class="bold-text">@{{ forum }}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{ username }}</a> {{ xDaysAgo }} days ago</p>
+            <p><span class="bold-text">@{{ forum }}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{ username }}</a> · {{xDaysAgo date }} </p>
         </div>
         <div class="post-title">
             <a href="posts/{{ _id }}"><h5 class="bold-text">{{ title }}</h5></a>

@@ -1,4 +1,5 @@
 const express = require('express')
+const { Types } = require('mongoose')
 const router = express.Router();
 const Post = require('../db/models/post.js')
 
@@ -11,7 +12,16 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const posts = await Post.find().lean().exec()
+    let keyword = new RegExp(req.body.search, 'i')
+    const posts = await Post.find({})
+        .or([
+            { forum: keyword },
+            { username: keyword },
+            { title: keyword },
+            { content: keyword }
+        ])
+        .sort([['date', -1]])
+        .exec()
     res.render('home', {
         title: 'Convo - Homepage',
         posts: posts
@@ -24,6 +34,13 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
     res.render('signup', { layout: false })
+})
+
+router.post('/upvote', async (req, res) => {
+    console.log(req.body.data.trim())
+    console.log("Updooting...");
+    const post = await Post.find({ comments: {$elemMatch: {body: req.body.data.trim()}} })
+    console.log(post.title);
 })
 
 // TEMPORARY CODE: REMOVE ALL LINES BELOW THIS 

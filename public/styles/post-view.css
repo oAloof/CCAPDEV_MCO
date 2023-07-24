@@ -106,23 +106,6 @@ header {
     border-bottom-color:#1e101d;
 }
 
-#search-form {
-    padding: 0 6px;
-    background-color: var(--clr-primary);
-    border: 1px solid var(--clr-secondary);
-}
-
-#search {
-    border: none;
-    background-color: var(--clr-primary);
-    color: var(--clr-secondary);
-}
-
-#search::placeholder {
-    color: var(--clr-secondary);
-    font-family: var(--ff-base);
-}
-
 a#link-register {
     color: var(--clr-text);
     font-family: var(--ff-base);
@@ -149,20 +132,6 @@ button#login-btn:active {
     background-color: var(--clr-primary);
     padding: 1.5em 1em;
 }
-
-#filter-container {
-    display: flex;
-    margin: 10px 0;
-}
-
-.filter {
-    background-color: var(--clr-accent);
-    border-radius: 15%;
-    color: var(--clr-secondary);
-    padding: 6px 8px;
-    margin-right: 2px;
-}
-
 
 div#home-main-cont {
     display: flex;
@@ -339,8 +308,8 @@ div#comments-main-cont {
     flex-direction: column;
     justify-content: left;
 
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    margin: 10px;
     height: auto;
     width: 95%;
 }
@@ -349,7 +318,7 @@ div.comment {
     display: flex;
     flex-direction: column;
 
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     height: auto;
     border-radius: 8px;
@@ -375,7 +344,8 @@ div#comment-actions {
 }
 
 img.comment-icons {
-    height: 16px;
-    width: auto;    
+    height: 30px;
+    width: auto;   
+    padding: 5px; 
 }
 

@@ -1,6 +1,6 @@
-<div class="comment">
+<div class="comment" dataMongodbId="{{ _id }}">
     <div id="comment-info-cont">
-        <p><span class="bold-text">{{ author }}</span> · {{ date }}</p>
+        <p><span class="bold-text">{{ author }}</span> · {{xDaysAgo date }}</p>
     </div>
 
     <div id="comment-content-cont">
@@ -8,10 +8,10 @@
     </div>
 
     <div id="comment-actions">
-        <span class="comment-upvote"> 
-            <img class="post-icons" src="../images/upvote-icon.png" alt="upvote">
+        <span class="comment-votes"> 
+            <img class="comment-icons upvote-btn" src="../images/upvote-icon.png" alt="upvote">
             {{ votes }}
-            <img class="post-icons" src="../images/downvote-icon.png" alt="downvote">
+            <img class="comment-icons downvote-btn" src="../images/downvote-icon.png" alt="downvote">
         </span>
         {{!-- Maybe implement replying --}}
     </div>

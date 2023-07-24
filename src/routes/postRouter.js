@@ -9,7 +9,6 @@ router.get('/new', (req, res) => {
 router.get('/:id', async (req, res) => {
     const post = await Post.findById(req.params.id).lean().exec()
     if (post == null) res.redirect('/')
-    // FIX: Make it so that the full text is seen
     res.render('posts/view', {
         title: post.title,
         post: post,
@@ -17,13 +16,21 @@ router.get('/:id', async (req, res) => {
     })
 })
 
-router.post('/:id', async (req, res) => {
-    let comment = {author: "User", body: req.body.comment-area}
-
-    Post.findByIdAndUpdate(req.params.id,
-        { "$push": { "childrens": employee._id } },
-        { "new": true, "upsert": true },
-    );
+// This updates the database and refreshes comment display on a post.
+router.post('/:id', async(req, res) => {
+    try{
+        const post = await Post.findByIdAndUpdate(req.params.id,
+            { $push: {"comments": {"body": req.body.commentArea}} },
+            { returnDocument: "after" })
+        res.render('posts/view', {
+            title: post.title,
+            post: post,
+            layout: "post-view"
+        })
+    } catch (e) {
+        console.log(e)
+        res.status(500)
+    }
 })
 
 module.exports = router;
