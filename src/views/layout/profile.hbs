@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="./bootstrap-5.3.0-dist\css\bootstrap.css">
+        <link rel="stylesheet" href="./styles/profile.css">
+
+        <title>{{ username }}'s Profile</title>
+    </head>
+    <body>
+        <header>
+            <a href="../../pages/home.html">
+                <img id="logo" src="../../images/ConvoLogo2.png">
+            </a>
+            <div id="div-for-layout"></div>
+
+            <form id="search-form" method="post">
+                <input type="text" name="search" id="search" placeholder="Search for post...">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f2f3cc" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </form>
+            <div>
+                <a id="link-register" href="../../pages/signup.html">Register</a>
+                <span>or</span>
+                <button class="btn btn-primary" id="login-btn">Login</button>
+            </div>
+        </header>
+        <div id="profile-subheader">
+            <div id="profile-subheader-buttons">
+                <span class="sh-button">OVERVIEW</span>
+                <span class="sh-button">POSTS</span>
+                <span class="sh-button">COMMENTS</span>
+                <span class="sh-button">HISTORY</span>
+                <span class="sh-button">SAVED</span>
+                <span class="sh-button">HIDDEN</span>
+                <span class="sh-button">UPVOTED</span>
+                <span class="sh-button">DOWNVOTED</span>
+                <span class="sh-button">AWARDS RECEIVED</span>
+                <span class="sh-button">AWARDS GIVEN</span>
+            </div>
+        </div>
+        <div id="profile-body">
+            <div id="profile-body-left">
+                <div id="hotbar">
+                    <button class="btn btn-primary hotbar-button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="#f2f3cc" class="bi bi-x-diamond" viewBox="0 0 16 16">
+                        <path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"/>
+                    </svg>New
+                    </button> 
+                    <button class="btn btn-primary hotbar-button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="#f2f3cc" class="bi bi-fire" viewBox="0 0 16 16">
+                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                      </svg>Hot
+                    </button> 
+                    <button class="btn btn-primary hotbar-button"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="#f2f3cc" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/>
+                      </svg>Top
+                    </button> 
+                </div>
+
+                <div id="content-container">
+                    <div class="content-post">
+                        <div class="vote">
+                            <div class="center"><img src="../../images/upvote-icon.png" class="vote-button"></div>
+                            <div class="number center">12</div>
+                            <div class="center"><img src="../../images/downvote-icon.png" class="vote-button"></div>
+                        </div>
+                        <div class="post-text">
+                            <div class="post-title">
+                                Why do my stormtroopers always miss?
+                            </div> 
+                            <div class="post-text-bottom-row">
+                                <span class="post-source">
+                                    @StarWars •
+                                </span>
+                                <span>
+                                    &nbspPosted by
+                                </span>
+                                <span class="posting-user">
+                                    &nbspu/DarthVader
+                                </span>
+                                <span class="days-ago">
+                                    &nbsp6 days ago
+                                </span>
+                            </div>
+                            <div class="post-bottom-buttons">
+                                <span id="comments"><img src="">Comments</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="award"><img src="">Award</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="share"><img src="">Share</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="hide"><img src="">Hide</span>
+                                <span class="vertical-spacer"> | </span>
+                                <span id="report"><img src="">Report</span>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-body-right">
+                <div id="profile-box">
+                    <div class="center"><img src="../../images/users-pfp/darthvader.jpg" id="user-photo"></div>
+                    <div class="center" id="user-info">
+                        <div id="username" class="center">DarthVader</div>
+                        <div id="user-tag" class="center">u/DarthVader</div>
+                    </div>
+                    <div class="center" id="change-pic">Change Profile Picture</div>
+                    <div class="center" id="new-post">New Post</div>
+                </div>
+                <div id="trophy-box">
+
+                    <span id="trophy-title">Trophy Case <span id="trophy-number">(1)</span></span>
+                </div>
+                
+                <div id="top-button" class="center">
+                    Back to Top
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

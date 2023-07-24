@@ -61,41 +61,20 @@
                             </div>
                         </div>
                     </div>
-                    <div id="title-box" class="center-box">
-                        <div id="title-text"> Title </div>
-                    </div>
-                    <div id="text-box" class="center-box">
-                        <div id="body-text"> Text (optional) </div>
-                    </div>
-                    <div>
-                        <div id="tags">
-                            <span class="pill">
-                                <span class="upsize">+</span>
-                                <span>OC</span>
-                            </span>
-                            <span class="pill">
-                                <span class="upsize">+</span>
-                                <span>Spoiler</span>
-                            </span>
-                            <span class="pill">
-                                <span class="upsize">+</span>
-                                <span>Flair</span>
-                            </span>
-                            <span class="pill">
-                                <span class="upsize">+</span>
-                                <span>Business</span>
-                            </span>
-                        </div>
-                    </div>
+                    
                     <div id="hr2">
                         <hr>
                     </div>
-                    <span class="save-draft pill right-align">
-                        Save Draft
-                    </span>
-                    <span class="post pill right-align">
-                        Post 
-                    </span>
+    
+                    <form id="post-form" method="post">
+                        <input type="text" name="titlebox" id="titlebox" placeholder="Title">
+                        <br>
+                        <textarea type="text" name="textbox" id="textbox" rows = "4" cols = "50" placeholder="Text"></textarea>
+                        <div id="hr2">
+                            <hr>
+                        </div>
+                        <input type="submit" class="post pill right-align" value="Post">
+                    </form>
                 </div>
             </div>
 
@@ -121,10 +100,6 @@
 
                 </div>
             </div>
-
         </div>
-
     </body>
-
-
 </html>
