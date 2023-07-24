@@ -7,14 +7,22 @@ $(document).ready(function() {
         // Check whether selected element is a post or a comment
         if (ancestor_Element.classList.contains("post")) {
             // Update post vote counter
-            const mongoDBobjectID = ancestor_Element.getAttribute("dataMongodbId")
+            const postMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
             $.post("/upvote", {
                 type: "post",
-                dataID: mongoDBobjectID
+                postDataID: postMongoDbId
             })
-            
+
         } else {
-            console.log("comment");
+            const commentMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
+            const postMongoDbId = $(this).parents()[4].children[0].getAttribute("dataMongodbId")
+            $.post("/upvote", {
+                type: "comment",
+                commentDataID: commentMongoDbId,
+                postDataID: postMongoDbId
+            }, function(data, status) {
+                
+            })
         }
         
 

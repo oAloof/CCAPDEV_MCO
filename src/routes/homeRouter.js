@@ -53,13 +53,15 @@ router.post('/signup', async (req, res) => {
 router.post('/upvote', async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
-
-        // Post.findByIdAndUpdate(req.body.dataID,
-        //     {$inc : {"Post.votes" : 1}}
-        // ).exec()
-        await Post.findOneAndUpdate({_id: req.body.dataID}, {$inc: { votes: 1 }})
+        await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: 1 }})
     } else {
-        console.log("comment");
+        const post = await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
+        {$inc: { "comments.$.votes": 1 }},
+        { returnDocument: "after" })
+
+        console.log(await Post.find({_id: req.body.postDataID, "comments._id": req.body.commentDataID}).select("comments") );
+        // const updated_voteCount = await Post.find({})
+        res.send({data: "hello"})
     }
 })
 

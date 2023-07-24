@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
     },
     usertag: {
         type: String,
-        default: "NewUser"
+        default: "New User"
+
     },
     // TODO: Password encryption
     password: {
