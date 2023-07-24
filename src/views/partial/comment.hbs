@@ -10,7 +10,7 @@
     <div id="comment-actions">
         <span class="comment-votes"> 
             <img class="comment-icons upvote-btn" src="../images/upvote-icon.png" alt="upvote">
-            {{ votes }}
+            <span class="vote-ctr {{_id}}">{{ votes }}</span>
             <img class="comment-icons downvote-btn" src="../images/downvote-icon.png" alt="downvote">
         </span>
         {{!-- Maybe implement replying --}}

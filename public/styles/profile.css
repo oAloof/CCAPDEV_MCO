@@ -451,4 +451,114 @@ button#login-btn:active {
     border-width: 1px;
 }
 
+/* EVERYTHING BELOW IS FOR POST PARTIALS */
+div.post {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
 
+    height: auto;
+    width: 95%;
+    min-height: 140px;
+    max-height: 225px;
+
+    border-radius: 8px;
+    border: 2px solid var(--clr-text);
+    background-color: var(--clr-accent2);
+    overflow: hidden;
+}
+
+div.post:hover {
+    background-color: var(--clr-secondary);
+    border: 2px solid var(--clr-accent2);
+}
+
+div.post-left-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 2px solid var(--clr-text);
+    height: auto;
+    width: 8%;
+    min-height: 140px;
+    max-height: 225px;
+}
+
+div.post-upvote img{
+    height: 20px;
+    width: auto;
+    margin: 5px;
+}
+
+div.post-vote-ctr {
+    font-family: var(--ff-base);
+    color: var(--clr-text);
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+div.post-downvote img{
+    margin: 5px;
+    height: 20px;
+    width: auto;
+}
+
+div.post-right-cont {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 92%;
+    max-height: 225px;
+    padding-left: 10px;
+}
+
+div.post-info-cont p {
+    margin: 0px;
+    padding: 5px;
+    color: var(--clr-text);
+    font-size: 12px;
+}   
+
+a.username-text {
+    color: var(--clr-text);
+}
+
+div.post-title {
+    margin-left: 5px;
+}
+
+div.post-title h5{
+    font-size: 15px;
+    color: var(--clr-text);
+}
+
+div.post-content-cont {
+    font-size: 13px;
+    padding: 5px;
+    max-height: 130px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+div.post-actions {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+div.post-actions span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    padding: 5px;
+}
+
+img.post-icons {
+    height: 12px;
+    width: auto;
+    margin: 2px;
+}

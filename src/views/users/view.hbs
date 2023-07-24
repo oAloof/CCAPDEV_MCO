@@ -16,7 +16,7 @@
         </div>
 
         <div id="content-container">
-            {{#each user.posts}}
+            {{#each posts}}
                 {{> post this}}
             {{/each}}
         </div>
@@ -28,14 +28,13 @@
             <div class="center" id="user-info">
                 <div id="username" class="center">{{ user.usertag }}</div>
                 <div id="user-tag" class="center">u/{{ user.username }}</div>
-                <div id="user-bio" class="center">{{ user.bio }}</div>
+                <div id="user-bio" class="center"></div>
             </div>
             <div class="center" id="change-pic">Change Profile Picture</div>
             <div class="center" id="new-post">New Post</div>
         </div>
         <div id="trophy-box">
-
-            <span id="trophy-title">Trophy Case <span id="trophy-number">(1)</span></span>
+            <span id="trophy-title">{{ user.bio }}</span>
         </div>
         
         <div id="top-button" class="center">

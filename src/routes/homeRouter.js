@@ -53,15 +53,40 @@ router.post('/signup', async (req, res) => {
 router.post('/upvote', async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
+        // Increment vote counter
         await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: 1 }})
+        // Retrieve the new vote count
+        var postComments = await Post.find({_id: req.body.postDataID});
+        var newVote_count = 0
+        postComments.forEach((document) => {
+            if (document._id == req.body.postDataID) {
+                newVote_count = document.votes
+                return
+            }
+        })
+         // Send data back to client
+         res.send({votes: newVote_count})
     } else {
-        const post = await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
-        {$inc: { "comments.$.votes": 1 }},
-        { returnDocument: "after" })
+        // Increment vote counter
+        await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
+        {$inc: { "comments.$.votes": 1 }})
 
-        console.log(await Post.find({_id: req.body.postDataID, "comments._id": req.body.commentDataID}).select("comments") );
-        // const updated_voteCount = await Post.find({})
-        res.send({data: "hello"})
+        // Retrieve the new vote count
+        var postComments = await Post.find({_id: req.body.postDataID});
+        
+        var newVote_count = 0
+        postComments.forEach((document) => {
+            const comments = document.comments
+            comments.forEach((comment) => {
+                if (comment._id == req.body.commentDataID) {
+                    newVote_count = comment.votes
+                    return
+                }
+            })
+        })
+
+        // Send data back to client
+        res.send({votes: newVote_count})
     }
 })
 

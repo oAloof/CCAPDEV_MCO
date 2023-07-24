@@ -1,3 +1,5 @@
+const dotenv = require('dotenv').config()
+
 // Packages
 const express = require('express')
 const Handlebars = require('handlebars')
@@ -32,8 +34,8 @@ async function main() {
     const postRouter = require('./src/routes/postRouter.js')
     const userRouter = require('./src/routes/userRouter.js')
 
-    app.use('/', homeRouter)
-    app.use('/posts', postRouter)
+    app.use('/', homeRouter);
+    app.use('/posts', postRouter);
     app.use('/users', userRouter)
 
     app.listen(3000, () => {
@@ -44,8 +46,6 @@ async function main() {
 }
 
 /** TODO-LIST:
- *  Userpage HBS
- *  - href in post.hbs
  *  Create Post HBS
  */
 main();

@@ -3,7 +3,7 @@
         <div class="post-upvote">
             <img class="upvote-btn" src="../images/upvote-icon.png" alt="upvote">
         </div>
-        <div class="post-vote-ctr">
+        <div class="post-vote-ctr {{_id}}">
             {{ votes }}
         </div>
         <div class="post-downvote">
@@ -15,7 +15,7 @@
             <p><span class="bold-text">@{{ forum }}</span> · Posted by <a class="username-text" href="/users/{{username}}">u/{{ username }}</a> · {{xDaysAgo date }} </p>
         </div>
         <div class="post-title">
-            <a href="posts/{{ _id }}"><h5 class="bold-text">{{ title }}</h5></a>
+            <a href="/posts/{{ _id }}"><h5 class="bold-text">{{ title }}</h5></a>
         </div>
         <div class="post-content-cont">
             {{ content }}
