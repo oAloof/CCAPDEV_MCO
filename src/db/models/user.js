@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
     usertag: {
         type: String,
         default: "New User"
+
     },
     // TODO: Password encryption
     password: {
@@ -19,13 +20,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "Hello World!"
     },
-    pfpic: {
-        data: Buffer,
-        contentType: String
+    pfp_path: {
+        type: String,
+        default: null
     },
     posts: [{ 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: "Post" 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Post
     }]
 }) 
 

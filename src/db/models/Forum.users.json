@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "64be30ac3ec48e34de4f9223"
+  },
+  "username": "DarthVader",
+  "usertag": "Darth Vader",
+  "password": "12345678",
+  "bio": "I am not your father.",
+  "pfp_path": "darthvader.jpg",
+  "posts": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be3aeb3027094c80dbdb0f"
+  },
+  "username": "stormtrooper609",
+  "usertag": "stormtrooper609",
+  "password": "12345678",
+  "bio": "For the Empire!",
+  "pfp_path": "stormtrooper.jpg",
+  "posts": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be3bb13027094c80dbdb1b"
+  },
+  "username": "sanestGachaGam3r",
+  "usertag": "sanestGachaGam3r",
+  "password": "12345678",
+  "bio": "L4Waifu",
+  "pfp_path": "sanegachagamer.jpg",
+  "posts": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be3c5a3027094c80dbdb20"
+  },
+  "username": "Gacha4Life",
+  "usertag": "Gacha4Life",
+  "password": "12345678",
+  "bio": "Gacha Status: I LOST 50/50",
+  "pfp_path": "Gacha4Life.jpg",
+  "posts": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be3c813027094c80dbdb23"
+  },
+  "username": "hackerMan",
+  "usertag": "hackerMan",
+  "password": "12345678",
+  "bio": "I can see you :)",
+  "pfp_path": "hackerMan.jpg",
+  "posts": [],
+  "__v": 0
+}]

@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router();
+const router = express.Router()
 const Post = require('../db/models/post.js')
 
 router.get('/new', async (req, res) => {
@@ -53,5 +53,5 @@ router.post('/:id', async(req, res) => {
     }
 })
 
+module.exports = router
 
-module.exports = router;
