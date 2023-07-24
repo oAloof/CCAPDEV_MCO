@@ -37,10 +37,16 @@ router.get('/signup', (req, res) => {
 })
 
 router.post('/upvote', async (req, res) => {
-    console.log(req.body.data.trim())
-    console.log("Updooting...");
-    const post = await Post.find({ comments: {$elemMatch: {body: req.body.data.trim()}} })
-    console.log(post.title);
+    // Check whether post or comment
+    if (req.body.type === "post") {
+
+        // Post.findByIdAndUpdate(req.body.dataID,
+        //     {$inc : {"Post.votes" : 1}}
+        // ).exec()
+        await Post.findOneAndUpdate({_id: req.body.dataID}, {$inc: { votes: 1 }})
+    } else {
+        console.log("comment");
+    }
 })
 
 // TEMPORARY CODE: REMOVE ALL LINES BELOW THIS 

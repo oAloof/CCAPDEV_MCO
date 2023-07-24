@@ -4,13 +4,13 @@
             <div class="post">
                 <div class="post-left-cont">
                     <div class="post-upvote">
-                        <img src="../images/upvote-icon.png" alt="upvote">
+                        <img class="upvote-btn" src="../images/upvote-icon.png" alt="upvote">
                     </div>
                     <div class="post-vote-ctr">
                         {{ post.votes }}
                     </div>
                     <div class="post-downvote">
-                        <img src="../images/downvote-icon.png" alt="downvote">
+                        <img class="downvote-btn" src="../images/downvote-icon.png" alt="downvote">
                     </div>
                 </div>
                 <div class="post-right-cont">
@@ -44,7 +44,6 @@
             <div id="comments-main-cont">
                 {{#each post.comments}}
                     {{> comment this}}
-                    
                 {{/each}}
             </div>
         </div>

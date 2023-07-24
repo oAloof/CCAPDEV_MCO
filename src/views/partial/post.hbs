@@ -1,13 +1,13 @@
-<div class="post">
-    <div class="post-left-cont upvote-btn">
+<div class="post" dataMongodbId="{{ _id }}">
+    <div class="post-left-cont">
         <div class="post-upvote">
-            <img src="../images/upvote-icon.png" alt="upvote">
+            <img class="upvote-btn" src="../images/upvote-icon.png" alt="upvote">
         </div>
         <div class="post-vote-ctr">
             {{ votes }}
         </div>
-        <div class="post-downvote downvote-btn">
-            <img src="../images/downvote-icon.png" alt="downvote">
+        <div class="post-downvote">
+            <img class="downvote-btn" src="../images/downvote-icon.png" alt="downvote">
         </div>
     </div>
     <div class="post-right-cont">
