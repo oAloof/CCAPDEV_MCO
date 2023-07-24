@@ -30,9 +30,11 @@ async function main() {
     // Routes
     const homeRouter = require('./src/routes/homeRouter.js')
     const postRouter = require('./src/routes/postRouter.js')
+    const userRouter = require('./src/routes/userRouter.js')
 
-    app.use('/', homeRouter);
-    app.use('/posts', postRouter);
+    app.use('/', homeRouter)
+    app.use('/posts', postRouter)
+    app.use('/users', userRouter)
 
     app.listen(3000, () => {
         console.log("Express app now listening...")
@@ -42,8 +44,6 @@ async function main() {
 }
 
 /** TODO-LIST:
- *  Implement the vote arrow functions
- *  - should change the value on site and in mongoDB as well
  *  Userpage HBS
  *  - href in post.hbs
  *  Create Post HBS

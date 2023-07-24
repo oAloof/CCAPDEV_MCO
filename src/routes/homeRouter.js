@@ -1,7 +1,7 @@
 const express = require('express')
-const { Types } = require('mongoose')
-const router = express.Router();
+const router = express.Router()
 const Post = require('../db/models/post.js')
+const User = require('../db/models/user.js')
 
 router.get('/', async (req, res) => {
     const posts = await Post.find().lean().exec()
@@ -34,6 +34,20 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
     res.render('signup', { layout: false })
+})
+
+router.post('/signup', async (req, res) => {
+    let user = new User({
+        username: req.body.username,
+        password: req.body.password
+    })
+
+    try {
+        user = await user.save()
+        res.redirect('/')
+    } catch (e) {
+        console.log(e)
+    }
 })
 
 router.post('/upvote', async (req, res) => {
@@ -73,4 +87,4 @@ router.post('/db', async (req, res) => {
     }
 })
 
-module.exports = router;
+module.exports = router

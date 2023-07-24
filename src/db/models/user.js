@@ -6,7 +6,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // TODO: Password encryption, if there's time
+    usertag: {
+        type: String,
+        default: "NewUser"
+    },
+    // TODO: Password encryption
     password: {
         type: String,
         required: true
@@ -15,7 +19,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "Hello World!"
     },
-    posts: [{ type: Post }]
+    pfp_path: {
+        type: String,
+        default: null
+    },
+    posts: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Post
+    }]
 }) 
 
 module.exports = mongoose.model('User', userSchema)
