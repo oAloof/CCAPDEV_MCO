@@ -1,0 +1,245 @@
+[{
+  "_id": {
+    "$oid": "64b6b0f1a87f2716a293b3a9"
+  },
+  "votes": 53,
+  "forum": "Starwars",
+  "username": "DarthVader",
+  "title": "Why do my stormtroopers always miss?",
+  "content": "I find it utterly perplexing, the sheer incompetence of my so-called \"elite\" stormtroopers! How is it possible that these bumbling fools consistently miss their targets? Their aim is as precise as a blind womp rat! I have invested countless resources into their training and armament, yet they continuously disappoint me. Is it too much to ask for a modicum of accuracy? Perhaps it's time to reevaluate the entire recruitment process, as this level of ineptitude is simply unacceptable. These imbeciles couldn't hit the broad side of a Star Destroyer if their lives depended on it! The galaxy deserves better, and I demand nothing short of perfection from my troops.",
+  "date": {
+    "$date": "2023-07-18T15:34:09.799Z"
+  },
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "It might be the gun",
+      "date": {
+        "$date": "2023-07-24T15:36:55.597Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9a9bf9ea52223b15c725"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64b6b1a92531228400c1b994"
+  },
+  "votes": 37,
+  "forum": "Starwars",
+  "username": "stormtrooper609",
+  "title": "Darth Vader, the Nightmare Boss",
+  "content": "Hey fellow troopers, I just had to vent about our boss, Darth Vader. I mean, seriously, the guy is a nightmare to work under. His constant demands, intimidating presence, and lack of clear instructions leave us in perpetual confusion. And don't even get me started on his management style – force chocking, and threats are hardly motivating. It's frustrating how he never takes responsibility for his own failures and instead blames us for everything. We risk our lives out here while he takes all the credit. Can we just have a more understanding and supportive leader already? I hope someone else takes over soon, so we can finally escape Vader's dark shadow and shine on our own. Stay strong, troopers!",
+  "date": {
+    "$date": "2023-07-18T15:37:13.621Z"
+  },
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64bbeb6d74216359d28ae41b"
+  },
+  "votes": 78,
+  "forum": "GenshinImpact",
+  "username": "sanestGachaGam3r",
+  "title": "About That New Genshin Impact Character",
+  "content": "I know we're all hyped about the latest character banner in Genshin Impact, but hear me out: I absolutely, positively, without a doubt will not pull for this new character. Even though their design is absolutely stunning, their abilities game-changing, and their lore captivating, I must resist the urge! I mean, who needs another powerful character in their lineup, right? I'll stay strong, cling to my dwindling primogems, and remind myself that I can conquer any challenge with my current roster. I don't need this new character, no matter how incredible they seem. Yeah, definitely... I can do this. I won't pull. Absolutely not.",
+  "date": {
+    "$date": "2023-07-22T14:45:01.228Z"
+  },
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "Your opinion is invalid",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d65b2bbdca3b7c69c5c"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64bbeb9274216359d28ae41d"
+  },
+  "votes": 26,
+  "forum": "GenshinImpact",
+  "username": "Gacha4Life",
+  "title": "My Wallet's Sacrifice",
+  "content": "I have a confession to make, and it might sound insane, but hear me out. I've spent all of my hard-earned money on Genshin Impact, and guess what? I genuinely think it's okay! Every Primogem purchase, every top-up, every wish made—I don't regret a single penny. Who needs a stable bank account when you can have a constellation-filled roster of characters, right? The thrill of pulling that coveted 5-star character, the adrenaline rush during intense boss battles, and the endless exploration of this breathtaking world—priceless! So what if my savings are non-existent now? I've ascended to a new level of madness, and in the world of Teyvat, I'm the ruler of my own destiny. May the Archons forgive my financial woes as I embark on yet another spending spree. Farewell, sane budgeting!",
+  "date": {
+    "$date": "2023-07-22T14:45:38.690Z"
+  },
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "Waifus > Money",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d52b2bbdca3b7c69c50"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64bbebfce00357745d3def9a"
+  },
+  "votes": 169,
+  "forum": "Programming",
+  "username": "hackerMan",
+  "title": "Coding is FUN!",
+  "content": "Greetings, fellow coders of the digital realm! Let me indulge in the twisted joy that consumes my very being, as I attempt to convince myself, nay, affirm with absolute certainty, that coding is undeniably fun. Yes, the hours spent deciphering cryptic error messages, the sleepless nights debugging seemingly impossible issues, and the maddening frustration of an elusive semicolon—all of it is an exhilarating rollercoaster ride, designed to push me to the brink of insanity. The thrill of unraveling complex algorithms, the euphoria of seeing lines of code bring life to my creations, and the satisfaction of conquering the insurmountable challenges that programming presents—it's an addiction I cannot escape, nor do I wish to. For deep within this madness lies the boundless creativity and the power to shape the digital universe. So, let the world question our sanity, but we, the deranged programmers, will continue our descent into the depths of code, laughing manically all the way.",
+  "date": {
+    "$date": "2023-07-22T14:47:24.006Z"
+  },
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be899857a17dedda4965e2"
+  },
+  "votes": 29,
+  "forum": "LogicProgramming",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T14:22:47.156Z"
+  },
+  "title": "Why doesn't my sort work",
+  "content": "I have tried everything but my code won't work",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "I think you just have to change the method to a GET request",
+      "date": {
+        "$date": "2023-07-24T15:05:08.549Z"
+      },
+      "votes": 8,
+      "_id": {
+        "$oid": "64be9358158f8a7c2a8b94af"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be976e20fd703fe8378b8d"
+  },
+  "votes": 0,
+  "forum": "LogicProgramming",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:21:58.745Z"
+  },
+  "title": "I think my sort finally works now!",
+  "content": "Thanks for the help guys",
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be97eaa3c2c818e847de49"
+  },
+  "votes": 30,
+  "forum": "DLSU",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:23:59.800Z"
+  },
+  "title": "I'm drowning there's too much to do",
+  "content": "Why does it feel like I jumped through the rings of Saturn only to change a 0 to a 1 > :(",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "asjkdbfuasbdfp;aubsdfp;ubasdf",
+      "date": {
+        "$date": "2023-07-24T15:32:54.363Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9a662334d6064115f4d1"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be98588979ebe0d551c81b"
+  },
+  "votes": 2,
+  "forum": "cats",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:26:21.953Z"
+  },
+  "title": "just saw a cute cat",
+  "content": "it has stripes!",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "meow meow",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d21b2bbdca3b7c69c39"
+      }
+    },
+    {
+      "author": "Anonymous",
+      "body": "meooowww\r\n",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d27b2bbdca3b7c69c3c"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be99f92334d6064115f4a8"
+  },
+  "votes": 9,
+  "forum": "dogs",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:32:54.363Z"
+  },
+  "title": "My dog is the BEST",
+  "content": "bork bork",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "borkkkk",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d16b2bbdca3b7c69c30"
+      }
+    }
+  ],
+  "__v": 0
+}]

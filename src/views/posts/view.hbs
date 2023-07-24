@@ -1,0 +1,52 @@
+<div id="home-main-cont">
+    <div id="left-main-cont">
+        <div id="posts-main-cont">
+
+            <div class="post" dataMongodbId="{{ post._id }}">
+                <div class="post-left-cont">
+                    <div class="post-upvote">
+                        <img class="upvote-btn" src="../images/upvote-icon.png" alt="upvote">
+                    </div>
+                    <div class="post-vote-ctr {{ post._id }}">
+                        {{ post.votes }}
+                    </div>
+                    <div class="post-downvote">
+                        <img class="downvote-btn" src="../images/downvote-icon.png" alt="downvote">
+                    </div>
+                </div>
+                <div class="post-right-cont">
+                    <div class="post-info-cont">
+                        <p><span class="bold-text">@{{ post.forum }}</span> · Posted by <a class="username-text" href="./sample-pages/DarthVaderprofile.html">u/{{ post.username }}</a> · {{xDaysAgo post.date }}</p>
+                    </div>
+                    <div class="post-title">
+                        <a href="#"><h5 class="bold-text">{{ post.title }}</h5></a>
+                    </div>
+                    <div class="post-content-cont">
+                        {{ post.content }}
+                    </div>
+                    <div class="post-actions">
+                        <span class="post-share"> <img class="post-icons" src="../images/share-icon.png"> Share</span>
+                        <span class="post-save"><img class="post-icons" src="../images/save-icon.png"> Save</span>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- Form for creating a comment --}}
+            <div class="create-comment-cont">
+                <form action="{{ _id }}" method="POST">
+                    <div class="mb-3">
+                        <label for="comment-area" class="form-label">Comment</label>
+                        <textarea required name = "commentArea" class="form-control" id="comment-area" rows="3" placeholder="What are your thoughts?"></textarea>
+                    </div>
+                    <input class="btn btn-primary comment-submit-btn" type="submit" value="Comment">
+                </form>
+            </div>
+
+            <div id="comments-main-cont">
+                {{#each post.comments}}
+                    {{> comment this}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

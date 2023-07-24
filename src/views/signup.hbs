@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="..\bootstrap-5.3.0-dist\css\bootstrap.css">
+    <link rel="stylesheet" href="../styles/signup.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#submit-btn').on('click', function() {
+                let x = $('#floatingPassword').val();
+                let y = $('#floatingCPassword').val();
+                if (x !== y) {
+                    alert('Passwords do not match.');
+                } else {
+                    document.signupForm.submit();
+                }
+            })
+        })
+    </script>
+    <title>Convo - Sign Up</title>
+</head>
+
+<body>
+    <div id="login-main-container">
+        <div id="login-header">
+            <a href="/">
+                <img id="logo" alt="Convo Logo" src="../images/ConvoLogo.png">
+            </a>
+            <p>Create Your Account</p>
+        </div>
+        <div id="login-form-container">
+            <form name="signupForm" action="/signup" method="POST">
+            <div id="inputs-container">
+                <div class="form-floating mb-3">
+                    <input name="username" required type="text" class="form-control" id="floatingUsername" placeholder="Username">
+                    <label for="floatingUsername">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input name="password" required type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                    <div id="passwordHelpBlock" class="form-text">
+                        Your password must be 8-20 characters long.
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input required type="password" class="form-control" id="floatingCPassword" placeholder="Confirm Password">
+                    <label for="floatingCPassword">Confirm Password</label>
+                </div>
+            </div>
+            <div class="d-grid col-10 mx-auto">
+                <button id="submit-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+            </form>
+        </div>
+        <div id="login-footer">
+            <p>Already have an account? <a class="text-decoration-none" href="/login">Log in.</a></p>
+        </div>
+    </div>  
+</body>
+</html>
