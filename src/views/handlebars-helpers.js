@@ -5,6 +5,9 @@ var register = function (Handlebars) {
             const today = new Date()
             const x = Math.round(Math.abs((dateObject - today) / oneDay))
             return (x<2)? 'Today': `${x-1} days ago`
+        },
+        xComments: function (collection) {
+            return collection.length
         }
     }
 

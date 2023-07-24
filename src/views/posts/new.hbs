@@ -1,105 +1,52 @@
-<!DOCTYPE html>
+<div id="profile-body">
+    <div id="profile-body-left">
+        <div id="create-post-text">
+            Create a post
+        </div>
+        <div id="hr1">
+            <hr>
+        </div>
 
-<html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../styles/create_post_view.css">
-
-        <title>Submit to Convo</title>
-    </head>
-    <body>
-        <header>
-            <a href="/">
-                <img id="logo" alt="Convo Logo" src="../images/ConvoLogo.png">
-            </a>
-            <form id="search-form" method="post">
-                <input type="text" name="search" id="search" placeholder="Search for post...">
-                <input type="submit" class="button" value="Search">
-            </form>
-            <div>
-                <a id="link-register" href="/register">Register</a>
-                <span>or</span>
-                <button class="button" id="link-login" onclick="window.location.href='/login'">Login</button>
+        <form id="post-form" action="new" method="POST">
+            <div id="choose-community">
+                <span id="choose-community-pic"></span>
+                <input type="text" name="forumbox" id="forumbox" placeholder="Forum">
             </div>
-        </header>
-        
-        <div id="profile-body">
-            <div id="profile-body-left">
-                <div id="create-post-text">
-                    Create a post
-                </div>
-                <div id="hr1">
+            <div id="bottom-box">
+                <div id="hr2">
                     <hr>
                 </div>
-                <div id="choose-community">
-                    <span id="choose-community-pic"></span>
-                    <span id="choose-community-text">Choose a topic</span>
-                </div>
-
-                <div id="bottom-box">
-                    <div id="header" >
-                        <div class="header-cell-left">
-                            <div>
-                                Post
-                            </div>
-                        </div>
-                        <div class="header-cell middle">
-                            <div>
-                                Image & Video
-                            </div>
-                        </div>
-                        <div class="header-cell">
-                            <div>
-                                Link
-                            </div>
-                        </div>
-                        <div class="header-cell-right">
-                            <div>
-                                Poll
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <input type="text" name="titlebox" id="titlebox" placeholder="Title">
+                    <br>
+                    <textarea type="text" name="textbox" id="textbox" rows = "4" cols = "50" placeholder="Text"></textarea>
                     <div id="hr2">
                         <hr>
                     </div>
-    
-                    <form id="post-form" action="/db" method="post">
-                        <input type="text" name="titlebox" id="titlebox" placeholder="Title">
-                        <br>
-                        <textarea type="text" name="textbox" id="textbox" rows = "4" cols = "50" placeholder="Text"></textarea>
-                        <div id="hr2">
-                            <hr>
-                        </div>
-                        <input type="submit" class="post pill right-align" value="Post">
-                    </form>
+                    <input type="submit" class="post pill right-align" value="Post">
+            </div>
+        </form>
+    </div>
+    <div id="profile-body-right">
+        <div id="profile-box">
+            <div id="posting-to-convo" >
+                Posting to Convo
+            </div>
+            <div class="horizontal-spacer center">
+                ______________________________________
+            </div>
+            <div class="rules">
+                <div>
+                    1. We love potatoes
+                </div>
+                <div>
+                    2. We hate tomatoes
+                </div>
+                <div>
+                    3. Behave.
                 </div>
             </div>
 
-            <div id="profile-body-right">
-                <div id="profile-box">
-                    <div id="posting-to-convo" >
-                        Posting to Convo
-                    </div>
-                    <div class="horizontal-spacer center">
-                        ______________________________________
-                    </div>
-                    <div class="rules">
-                        <div>
-                            1. We love potatoes
-                        </div>
-                        <div>
-                            2. We hate tomatoes
-                        </div>
-                        <div>
-                            3. Behave.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+   

@@ -73,8 +73,8 @@ header {
 img#logo {
     position: absolute;
     left: -5px;
-    bottom: -15px;
-    height: 80px;
+    bottom: -38px;
+    height: 140px;
     width: auto;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -552,6 +552,22 @@ a#link-register {
     font-weight: lighter;
 }
 
+#forumbox {
+    border-radius:5px;
+    border-color:#1e101d;
+    border-width:1px;
+    border-style: solid;
+
+    background-color:antiquewhite;
+
+    font: var(--ff-accent);
+    font-weight: lighter;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 10px;
+}
+
 #body-text {
     font-weight: lighter;
     border-radius:5px;
@@ -607,7 +623,7 @@ a#link-register {
     border-radius: 5px;
     border-color: var(--clr-secondary);
 
-    min-height: 385px;   
+    min-height: 350px;   
 }
 
 #create-post-text {

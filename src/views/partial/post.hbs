@@ -21,7 +21,9 @@
             {{ content }}
         </div>
         <div class="post-actions">
-            <span class="post-comments"><img class="post-icons" src="../images/comment-icon.png"> Comments</span>
+            <span class="post-comments" onclick="window.location.href='/posts/{{ _id }}';">
+                <img class="post-icons" src="../images/comment-icon.png">{{xComments comments}} Comments
+            </span>
             <span class="post-share"> <img class="post-icons" src="../images/share-icon.png"> Share</span>
             <span class="post-save"><img class="post-icons" src="../images/save-icon.png"> Save</span>
         </div>

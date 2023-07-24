@@ -7,7 +7,11 @@
   "password": "12345678",
   "bio": "I am not your father.",
   "pfp_path": "darthvader.jpg",
-  "posts": [],
+  "posts": [
+    {
+      "$oid": "64b6b0f1a87f2716a293b3a9"
+    }
+  ],
   "__v": 0
 },
 {
@@ -19,7 +23,11 @@
   "password": "12345678",
   "bio": "For the Empire!",
   "pfp_path": "stormtrooper.jpg",
-  "posts": [],
+  "posts": [
+    {
+      "$oid": "64b6b1a92531228400c1b994"
+    }
+  ],
   "__v": 0
 },
 {
@@ -31,7 +39,11 @@
   "password": "12345678",
   "bio": "L4Waifu",
   "pfp_path": "sanegachagamer.jpg",
-  "posts": [],
+  "posts": [
+    {
+      "$oid": "64bbeb6d74216359d28ae41b"
+    }
+  ],
   "__v": 0
 },
 {
@@ -43,7 +55,11 @@
   "password": "12345678",
   "bio": "Gacha Status: I LOST 50/50",
   "pfp_path": "Gacha4Life.jpg",
-  "posts": [],
+  "posts": [
+    {
+      "$oid": "64bbeb9274216359d28ae41d"
+    }
+  ],
   "__v": 0
 },
 {
@@ -55,6 +71,22 @@
   "password": "12345678",
   "bio": "I can see you :)",
   "pfp_path": "hackerMan.jpg",
+  "posts": [
+    {
+      "$oid": "64bbebfce00357745d3def9a"
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be9d9e7eb69ef2883ba048"
+  },
+  "username": "Anonymous",
+  "usertag": "New User",
+  "password": "12345678",
+  "bio": "Hello World!",
+  "pfp_path": null,
   "posts": [],
   "__v": 0
 }]

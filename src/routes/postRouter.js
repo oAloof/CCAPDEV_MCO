@@ -2,36 +2,30 @@ const express = require('express')
 const router = express.Router()
 const Post = require('../db/models/post.js')
 
-router.get('/db', async (req, res) => {
-    res.render('posts/new', { layout: false })
+router.get('/new', async (req, res) => {
+    res.render('posts/new', { layout: 'create-post' })
+})
+
+router.post('/new', async (req, res) => {
     
-})
-/*
-
-router.get('/db', (req, res) => {
-    res.render('temp', { post: new Post() })
-})
-
-router.post('/db', async (req, res) => {
     let post = new Post({
-        forum: req.body.forum,
-        username: req.body.username,
-        title: req.body.title,
-        content: req.body.content,
+        forum: req.body.forumbox,
+        username: "Anonymous", //needs sessions
+        title: req.body.titlebox,
+        content: req.body.textbox,
     })
 
     try {
         post = await post.save()
-        alert("Post inserted into DB!")
+        const posts = await Post.find({}).exec()
+        res.render('home', {
+            title: 'Convo - Homepage',
+            posts: posts
+        })
     } catch (e) {
         console.log(e)
-        res.render('temp', { post: post })
     }
 })
-
-*/
-
-
 
 router.get('/:id', async (req, res) => {
     const post = await Post.findById(req.params.id).lean().exec()

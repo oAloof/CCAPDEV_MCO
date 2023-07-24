@@ -45,7 +45,4 @@ async function main() {
     });
 }
 
-/** TODO-LIST:
- *  Create Post HBS
- */
 main();

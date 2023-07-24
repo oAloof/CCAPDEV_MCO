@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "64b6b0f1a87f2716a293b3a9"
   },
-  "votes": 12,
+  "votes": 53,
   "forum": "Starwars",
   "username": "DarthVader",
   "title": "Why do my stormtroopers always miss?",
@@ -10,14 +10,26 @@
   "date": {
     "$date": "2023-07-18T15:34:09.799Z"
   },
-  "comments": [],
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "It might be the gun",
+      "date": {
+        "$date": "2023-07-24T15:36:55.597Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9a9bf9ea52223b15c725"
+      }
+    }
+  ],
   "__v": 0
 },
 {
   "_id": {
     "$oid": "64b6b1a92531228400c1b994"
   },
-  "votes": 38,
+  "votes": 37,
   "forum": "Starwars",
   "username": "stormtrooper609",
   "title": "Darth Vader, the Nightmare Boss",
@@ -32,7 +44,7 @@
   "_id": {
     "$oid": "64bbeb6d74216359d28ae41b"
   },
-  "votes": 53,
+  "votes": 78,
   "forum": "GenshinImpact",
   "username": "sanestGachaGam3r",
   "title": "About That New Genshin Impact Character",
@@ -40,14 +52,26 @@
   "date": {
     "$date": "2023-07-22T14:45:01.228Z"
   },
-  "comments": [],
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "Your opinion is invalid",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d65b2bbdca3b7c69c5c"
+      }
+    }
+  ],
   "__v": 0
 },
 {
   "_id": {
     "$oid": "64bbeb9274216359d28ae41d"
   },
-  "votes": 27,
+  "votes": 26,
   "forum": "GenshinImpact",
   "username": "Gacha4Life",
   "title": "My Wallet's Sacrifice",
@@ -55,14 +79,26 @@
   "date": {
     "$date": "2023-07-22T14:45:38.690Z"
   },
-  "comments": [],
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "Waifus > Money",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d52b2bbdca3b7c69c50"
+      }
+    }
+  ],
   "__v": 0
 },
 {
   "_id": {
     "$oid": "64bbebfce00357745d3def9a"
   },
-  "votes": 168,
+  "votes": 169,
   "forum": "Programming",
   "username": "hackerMan",
   "title": "Coding is FUN!",
@@ -71,5 +107,139 @@
     "$date": "2023-07-22T14:47:24.006Z"
   },
   "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be899857a17dedda4965e2"
+  },
+  "votes": 29,
+  "forum": "LogicProgramming",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T14:22:47.156Z"
+  },
+  "title": "Why doesn't my sort work",
+  "content": "I have tried everything but my code won't work",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "I think you just have to change the method to a GET request",
+      "date": {
+        "$date": "2023-07-24T15:05:08.549Z"
+      },
+      "votes": 8,
+      "_id": {
+        "$oid": "64be9358158f8a7c2a8b94af"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be976e20fd703fe8378b8d"
+  },
+  "votes": 0,
+  "forum": "LogicProgramming",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:21:58.745Z"
+  },
+  "title": "I think my sort finally works now!",
+  "content": "Thanks for the help guys",
+  "comments": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be97eaa3c2c818e847de49"
+  },
+  "votes": 30,
+  "forum": "DLSU",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:23:59.800Z"
+  },
+  "title": "I'm drowning there's too much to do",
+  "content": "Why does it feel like I jumped through the rings of Saturn only to change a 0 to a 1 > :(",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "asjkdbfuasbdfp;aubsdfp;ubasdf",
+      "date": {
+        "$date": "2023-07-24T15:32:54.363Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9a662334d6064115f4d1"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be98588979ebe0d551c81b"
+  },
+  "votes": 2,
+  "forum": "cats",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:26:21.953Z"
+  },
+  "title": "just saw a cute cat",
+  "content": "it has stripes!",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "meow meow",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d21b2bbdca3b7c69c39"
+      }
+    },
+    {
+      "author": "Anonymous",
+      "body": "meooowww\r\n",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d27b2bbdca3b7c69c3c"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64be99f92334d6064115f4a8"
+  },
+  "votes": 9,
+  "forum": "dogs",
+  "username": "Anonymous",
+  "date": {
+    "$date": "2023-07-24T15:32:54.363Z"
+  },
+  "title": "My dog is the BEST",
+  "content": "bork bork",
+  "comments": [
+    {
+      "author": "Anonymous",
+      "body": "borkkkk",
+      "date": {
+        "$date": "2023-07-24T15:44:06.139Z"
+      },
+      "votes": 0,
+      "_id": {
+        "$oid": "64be9d16b2bbdca3b7c69c30"
+      }
+    }
+  ],
   "__v": 0
 }]

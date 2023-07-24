@@ -3,7 +3,7 @@ $(document).ready(function() {
     // Listener for upvote button click
     $(".upvote-btn").on("click", function() {
         this.src = "../images/upvote-icon-clicked.png"
-
+        
         const ancestor_Element = $(this).parents()[2]
 
         // Check whether selected element is a post or a comment
@@ -37,5 +37,44 @@ $(document).ready(function() {
                     htmlObject[0].innerHTML = data.votes
                 })
         } 
+    })
+
+    // Listener for downvote button click
+    $(".downvote-btn").on("click", function() {
+        this.src = "../images/downvote-icon-clicked.png"
+
+        const ancestor_Element = $(this).parents()[2]
+
+         // Check whether selected element is a post or a comment
+         if (ancestor_Element.classList.contains("post")) {
+            // Update post vote counter
+            const postMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
+            
+            const selector = `.post-vote-ctr.${postMongoDbId}`
+            var htmlObject = $(selector)
+            console.log(htmlObject[0].innerText);
+            $.post("/downvote", {
+                type: "post",
+                postDataID: postMongoDbId
+            }, (data) => {
+                // Update Vote Counter
+                htmlObject[0].innerText = data.votes
+            })
+
+        } else {
+            const commentMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
+            const postMongoDbId = $(this).parents()[4].children[0].getAttribute("dataMongodbId")
+
+            const selector = `.vote-ctr.${commentMongoDbId}`
+            var htmlObject = $(selector)
+            $.post("/downvote", {
+                type: "comment",
+                commentDataID: commentMongoDbId,
+                postDataID: postMongoDbId
+                }, (data) => {
+                    // Update Vote Counter
+                    htmlObject[0].innerHTML = data.votes
+                })
+        }
     })
 });

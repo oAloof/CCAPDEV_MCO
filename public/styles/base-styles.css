@@ -378,7 +378,7 @@ div#trending-topics-cont {
 
     border: 2px solid var(--clr-text);
     border-radius: 10px;
-    padding: 0px;
+    padding: 0 0 0 5px;
     background-color: var(--clr-primary);
     margin-bottom: 40px;
 }
@@ -399,6 +399,8 @@ div.topic-title {
     font-size: 16px;
 }
 
-
+.post-comments {
+    cursor: pointer
+}
 
 
