@@ -41,8 +41,6 @@ async function main() {
     app.use('/posts', postRouter);
     app.use('/users', userRouter)
 
-    console.log(port, db_url);
-
     app.listen(port, () => {
         console.log("Express app now listening...")
         mongoose.connect(db_url)
