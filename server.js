@@ -10,6 +10,9 @@ const { engine } = require('express-handlebars')
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
 
 async function main() {
+    const port = process.env.SERVER_PORT
+    const db_url = process.env.DB_URL
+
     const app = express()
     app.use(express.urlencoded({ extended: false }))
     app.use(express.json())
@@ -38,9 +41,11 @@ async function main() {
     app.use('/posts', postRouter);
     app.use('/users', userRouter)
 
-    app.listen(3000, () => {
+    console.log(port, db_url);
+
+    app.listen(port, () => {
         console.log("Express app now listening...")
-        mongoose.connect('mongodb://0.0.0.0/Forum')
+        mongoose.connect(db_url)
         console.log("Connected to database.")
     });
 }
