@@ -74,7 +74,7 @@ router.post('/upvote', async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
         // Increment vote counter
-        await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: 1 }})
+        await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: req.body.votes }})
         // Retrieve the new vote count
         var postComments = await Post.find({_id: req.body.postDataID});
         var newVote_count = 0
@@ -114,7 +114,7 @@ router.post('/downvote', async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
         // Increment vote counter
-        await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: -1 }})
+        await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: req.body.votes }})
         // Retrieve the new vote count
         var postComments = await Post.find({_id: req.body.postDataID});
         var newVote_count = 0
