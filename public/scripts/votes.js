@@ -35,8 +35,6 @@ $(document).ready(function() {
                     votesToAdd = 1
                 }
             }
-
-
             // Update post vote counter
             const postMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
             
@@ -52,6 +50,35 @@ $(document).ready(function() {
             })
 
         } else {
+            /* 
+            Check if upvote button is already clicked.
+            If clicked, subtract one from vote counter
+            else, check if downvote button is clicked.
+            */
+            if (this.classList.contains("clicked")) {
+                // Subtract 1 to vote counter
+                this.classList.remove("clicked")
+                this.src = "../images/upvote-icon.png"
+                votesToAdd = -1
+
+            } else {
+                this.classList.add("clicked")
+                this.src = "../images/upvote-icon-clicked.png"
+                /**
+                 * Check if downvote button is clicked.
+                 * If clicked, add two to votes and reset downvote button to "unclicked"
+                 * else, add 1
+                 */
+                const downvoteBtnHTMLobj = $(this).parents()[0].children[2]
+                if (downvoteBtnHTMLobj.classList.contains("clicked")) {
+                    downvoteBtnHTMLobj.classList.remove("clicked")
+                    downvoteBtnHTMLobj.src = "../images/downvote-icon.png"
+                    votesToAdd = 2
+                } else {
+                    votesToAdd = 1
+                }
+            }
+
             const commentMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
             const postMongoDbId = $(this).parents()[4].children[0].getAttribute("dataMongodbId")
 
@@ -60,7 +87,8 @@ $(document).ready(function() {
             $.post("/upvote", {
                 type: "comment",
                 commentDataID: commentMongoDbId,
-                postDataID: postMongoDbId
+                postDataID: postMongoDbId,
+                votes: votesToAdd
                 }, (data) => {
                     // Update Vote Counter
                     htmlObject[0].innerHTML = data.votes
@@ -121,6 +149,35 @@ $(document).ready(function() {
             })
 
         } else {
+            /* 
+            Check if downvote button is already clicked.
+            If clicked, subtract one from vote counter
+            else, check if upvote button is clicked.
+            */
+            if (this.classList.contains("clicked")) {
+                // Subtract 1 to vote counter
+                this.classList.remove("clicked")
+                this.src = "../images/downvote-icon.png"
+                votesToAdd = 1
+
+            } else {
+                this.classList.add("clicked")
+                this.src = "../images/downvote-icon-clicked.png"
+                /**
+                 * Check if upvote button is clicked.
+                 * If clicked, add two to votes and reset upvote button to "unclicked"
+                 * else, add 1
+                 */
+                const upvoteBtnHTMLobj = $(this).parents()[0].children[0]
+                if (upvoteBtnHTMLobj.classList.contains("clicked")) {
+                    upvoteBtnHTMLobj.classList.remove("clicked")
+                    upvoteBtnHTMLobj.src = "../images/upvote-icon.png"
+                    votesToAdd = -2
+                } else {
+                    votesToAdd = -1
+                }
+            }
+
             const commentMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
             const postMongoDbId = $(this).parents()[4].children[0].getAttribute("dataMongodbId")
 
@@ -129,7 +186,8 @@ $(document).ready(function() {
             $.post("/downvote", {
                 type: "comment",
                 commentDataID: commentMongoDbId,
-                postDataID: postMongoDbId
+                postDataID: postMongoDbId,
+                votes: votesToAdd
                 }, (data) => {
                     // Update Vote Counter
                     htmlObject[0].innerHTML = data.votes

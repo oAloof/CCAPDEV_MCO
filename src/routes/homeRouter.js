@@ -89,7 +89,7 @@ router.post('/upvote', async (req, res) => {
     } else {
         // Increment vote counter
         await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
-        {$inc: { "comments.$.votes": 1 }})
+        {$inc: { "comments.$.votes": req.body.votes }})
 
         // Retrieve the new vote count
         var postComments = await Post.find({_id: req.body.postDataID});
@@ -129,7 +129,7 @@ router.post('/downvote', async (req, res) => {
     } else {
         // Increment vote counter
         await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
-        {$inc: { "comments.$.votes": -1 }})
+        {$inc: { "comments.$.votes": req.body.votes }})
 
         // Retrieve the new vote count
         var postComments = await Post.find({_id: req.body.postDataID});
