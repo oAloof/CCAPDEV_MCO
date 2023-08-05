@@ -77,18 +77,26 @@ router.get('/signup', checkNotAuthenticated, (req, res) => {
 })
 
 router.post('/signup', checkNotAuthenticated, async (req, res) => {
-    const hashedPassword = await bcrypt.hash(req.body.password,10)
-    let user = new User({
-        username: req.body.username,
-        password: hashedPassword
-    })
+    // Check if username already exists
+    const result = await User.findOne({"username": req.body.username})
+    if (result) {
+        res.send("User exists")
+    } else {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        let user = new User({
+            username: req.body.username,
+            password: hashedPassword
+        })
 
-    try {
-        user = await user.save()
-        res.redirect('/')
-    } catch (e) {
-        console.log(e)
+        try {
+            user = await user.save()
+            res.send("Success")
+        } catch (e) {
+            console.log(e)
+        }
     }
+    
+    
 })
 
 router.post('/upvote', async (req, res) => {

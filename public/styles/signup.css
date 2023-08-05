@@ -55,10 +55,11 @@ div#login-form-container {
     flex-direction: column;
     border-radius: 3%;
     width: 380px;
-    height: 370px;
+    min-height: 370px;
+    height: auto;
     border: 1px solid var(--clr-secondary);
     background-color: var(--clr-primary);
-    
+    padding: 20px;
 }
 
 div#inputs-container {
@@ -104,4 +105,11 @@ button#submit-btn:hover {
 
 button#submit-btn:active {
     background-color: var(--clr-accent1);
+}
+
+div.error-msg-cont {
+    display: flex;
+    min-width: 320px;
+    justify-content: center;
+    color: red;
 }
