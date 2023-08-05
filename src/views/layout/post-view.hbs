@@ -26,12 +26,13 @@
             <img id="logo" alt="Convo Logo" src="../../images/ConvoLogo2.png">
         </a>
         <div id="div-for-layout"></div>
-        
-        <div>
+        {{#if user_auth}}
+            <span>Welcome, <a href="/users/{{user_auth}}">{{user_auth}}</a>! <a href="/logout">Logout</a></span>
+        {{else}}
             <a id="link-register" href="/signup">Register</a>
             <span>or</span>
             <button class="btn btn-primary" id="login-btn" onclick="window.location.href='/login';">Login</button>
-        </div>
+        {{/if}}
     </header>
     {{{ body }}}
 </body>

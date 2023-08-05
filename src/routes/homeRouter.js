@@ -1,9 +1,15 @@
+// Modules
 const express = require('express')
-const router = express.Router()
+const bcrypt = require('bcrypt')
+const passport = require('passport')
+
+// MongoDB Models
 const Post = require('../db/models/post.js')
 const User = require('../db/models/user.js')
 
-router.get('/', async (req, res) => {
+const router = express.Router()
+
+router.get('/', checkAuthenticated, async (req, res) => {
     const key = req.query.sort
     var param = {}
     if (key !== undefined) {
@@ -26,7 +32,8 @@ router.get('/', async (req, res) => {
         .exec()
     res.render('home', {
         title: 'Convo - Homepage',
-        posts: posts
+        posts: posts,
+        user_auth: req.user.username
     })
 })
 
@@ -48,18 +55,32 @@ router.post('/', async (req, res) => {
     })
 })
 
-router.get('/login', (req, res) => {
+router.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login', { layout: false })
 })
 
-router.get('/signup', (req, res) => {
+router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+}))
+
+router.get('/logout', (req, res) => {
+    req.logOut((err) => {
+        if (err) { return next(err) }
+        res.redirect('/login')
+    })
+})
+
+router.get('/signup', checkNotAuthenticated, (req, res) => {
     res.render('signup', { layout: false })
 })
 
-router.post('/signup', async (req, res) => {
+router.post('/signup', checkNotAuthenticated, async (req, res) => {
+    const hashedPassword = await bcrypt.hash(req.body.password,10)
     let user = new User({
         username: req.body.username,
-        password: req.body.password
+        password: hashedPassword
     })
 
     try {
@@ -149,5 +170,16 @@ router.post('/downvote', async (req, res) => {
         res.send({votes: newVote_count})
     }
 })
+
+// Middleware for checking User authentication
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { return next() }
+    res.redirect('/login')
+}
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { return res.redirect('/') }
+    next()
+}
 
 module.exports = router

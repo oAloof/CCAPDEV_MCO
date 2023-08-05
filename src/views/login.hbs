@@ -9,6 +9,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
+<script>
+    $(document).ready(() => {
+        // Fetch form that need validation
+        const forms = $(".needs-validation")
+
+        // Loop over forms and prevent submission
+        Array.from(forms).forEach((form) => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            })
+        })
+    })
+</script>
+
 <body>
     <div id="login-main-container">
         <div id="login-header">
@@ -18,15 +37,30 @@
             <p>Sign in to Your Account</p>
         </div>
         <div id="login-form-container">
-            <form action="/" method="post">
+            <p>
+                {{#if messages.error}}
+                    {{messages.error}}
+                {{/if}}
+            </p>
+            <form action="/login" method="post" class="needs-validation" novalidate>
             <div id="inputs-container">
                 <div class="form-floating mb-3">
-                    <input required type="text" class="form-control" id="floatingUsername" placeholder="Username">
+                    <input required type="text" class="form-control" name="username" id="floatingUsername" placeholder="Username">
                     <label for="floatingUsername">Username</label>
+                    <div class="valid-feedback">
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a username.
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
-                    <input required type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input required type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Password</label>
+                    <div class="valid-feedback">
+                    </div>
+                    <div class="invalid-feedback">
+                        Please provide a password.
+                    </div>
                     <div id="forgot-pw-cont">
                         <a href="#" class="text-decoration-none" id="forgot-pw">Forgot password?</a>
                     </div>

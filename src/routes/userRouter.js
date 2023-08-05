@@ -16,7 +16,8 @@ router.get('/:username', async (req, res) => {
         username: user.username,
         user: user,
         posts: postsToRender,
-        layout: 'profile'
+        layout: 'profile',
+        user_auth: req.user.username
     })
 })
 

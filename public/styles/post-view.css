@@ -80,6 +80,8 @@ header {
 
     background-color: var(--clr-primary);
     border-bottom: 2px solid var(--clr-text);
+
+    min-height: 65px;
 }
 
 #profile-subheader {

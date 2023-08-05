@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Post = require('../db/models/post.js')
 
-router.get('/new', async (req, res) => {
+router.get('/new', checkAuthenticated, async (req, res) => {
     res.render('posts/new', { layout: 'create-post' })
 })
 
@@ -10,7 +10,7 @@ router.post('/new', async (req, res) => {
     
     let post = new Post({
         forum: req.body.forumbox,
-        username: "Anonymous", //needs sessions
+        username: req.user.username || "Anonymous",
         title: req.body.titlebox,
         content: req.body.textbox,
     })
@@ -18,42 +18,47 @@ router.post('/new', async (req, res) => {
     try {
         post = await post.save()
         const posts = await Post.find({}).exec()
-        res.render('home', {
-            title: 'Convo - Homepage',
-            posts: posts
-        })
+        res.redirect('/')
     } catch (e) {
         console.log(e)
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', checkAuthenticated, async (req, res) => {
     const post = await Post.findById(req.params.id).lean().exec()
     if (post == null) res.redirect('/')
     res.render('posts/view', {
         title: post.title,
         post: post,
-        layout: "post-view"
+        layout: "post-view",
+        user_auth: req.user.username
     })
 })
 
 // This updates the database and refreshes comment display on a post.
 router.post('/:id', async(req, res) => {
+    if (req.user) {
+        var pushed_comment = {"author": req.user.username,"body": req.body.commentArea}
+    } else {
+        var pushed_comment = {"body": req.body.commentArea}
+    }
     try{
         const post = await Post.findByIdAndUpdate(req.params.id,
-            { $push: {"comments": {"body": req.body.commentArea}} },
+            { $push: {"comments": pushed_comment} },
             { returnDocument: "after" })
             
-        res.render('posts/view', {
-            title: post.title,
-            post: post,
-            layout: "post-view"
-        })
+        res.redirect('/posts/'+ req.params.id)
     } catch (e) {
         console.log(e)
         res.status(500)
     }
 })
+
+// Middleware for checking User authentication
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { return next() }
+    res.redirect('/login')
+}
 
 module.exports = router
 

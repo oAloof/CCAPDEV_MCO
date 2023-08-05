@@ -15,23 +15,16 @@
             </a>
             <div id="div-for-layout"></div>
             <div>
-                <a id="link-register" href="/signup">Register</a>
-                <span>or</span>
-                <button class="btn btn-primary" id="login-btn" onclick="window.location.href='/login';">Login</button>
+                {{#if user_auth}}
+                    <span>Welcome, <a href="/users/{{user_auth}}">{{user_auth}}</a>! <a href="/logout">Logout</a></span>
+                {{else}}
+                    <a id="link-register" href="/signup">Register</a>
+                    <span>or</span>
+                    <button class="btn btn-primary" id="login-btn" onclick="window.location.href='/login';">Login</button>
+                {{/if}}
             </div>
         </header>
-        <div id="profile-subheader">
-            <div id="profile-subheader-buttons">
-                <span class="sh-button">OVERVIEW</span>
-                <span class="sh-button">POSTS</span>
-                <span class="sh-button">COMMENTS</span>
-                <span class="sh-button">HISTORY</span>
-                <span class="sh-button">SAVED</span>
-                <span class="sh-button">HIDDEN</span>
-                <span class="sh-button">UPVOTED</span>
-                <span class="sh-button">DOWNVOTED</span>
-            </div>
-        </div>
+
         {{{ body }}}
     </body>
 </html>
