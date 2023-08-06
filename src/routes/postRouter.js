@@ -17,7 +17,10 @@ router.post('/new', async (req, res) => {
 
     try {
         post = await post.save()
-        const posts = await Post.find({}).exec()
+        // Add new post to user's posts array
+        req.user.posts.push(post._id)
+        req.user.save()
+        // const posts = await Post.find({}).exec()
         res.redirect('/')
     } catch (e) {
         console.log(e)

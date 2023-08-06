@@ -94,9 +94,7 @@ router.post('/signup', checkNotAuthenticated, async (req, res) => {
         } catch (e) {
             console.log(e)
         }
-    }
-    
-    
+    }  
 })
 
 router.post('/upvote', async (req, res) => {
