@@ -10,9 +10,9 @@ const User = require('../db/models/user.js')
 const router = express.Router()
 
 // Constant for About Page
-NPM_PACKAGES = ["@handlebars/allow-prototype-access","bcrypt","dotenv","ejs","express","express-flash","express-handlebars","express-session","mongoose","passport","passport-local","nodemon"]
+NPM_PACKAGES = ["@handlebars/allow-prototype-access","bcrypt","dotenv","express","express-flash","express-handlebars","express-session","mongoose","passport","passport-local","nodemon"]
 
-router.get('/', checkAuthenticated, async (req, res) => {
+router.get('/', async (req, res) => {
     const key = req.query.sort
     var param = {}
     if (key !== undefined) {
@@ -27,21 +27,24 @@ router.get('/', checkAuthenticated, async (req, res) => {
                 param = {votes: -1}
                 break
             default: 
-                param = { _id: 1 }
+                param = { _id: -1 }
                 break
     }}
     const posts = await Post.find({})
+        .where('status').ne('Removed')
         .sort(param)
         .exec()
+
+    const user_auth = req.user ?? false
     res.render('home', {
         title: 'Convo - Homepage',
         searchbar: true,
         posts: posts,
-        user_auth: req.user.username
+        user_auth: (user_auth? user_auth.username : false)
     })
 })
 
-router.post('/', async (req, res) => {
+router.get('/search', checkAuthenticated, async (req, res) => {
     let keyword = new RegExp(req.body.search, 'i')
     const posts = await Post.find({})
         .or([
@@ -50,12 +53,14 @@ router.post('/', async (req, res) => {
             { title: keyword },
             { content: keyword }
         ])
+        .where('status').ne('Removed')
         .sort([['date', -1]])
         .exec()
         
     res.render('home', {
         title: 'Convo - Homepage',
-        posts: posts
+        posts: posts,
+        user_auth: req.user.username
     })
 })
 

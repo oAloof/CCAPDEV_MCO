@@ -8,6 +8,22 @@ var register = function (Handlebars) {
         },
         xComments: function (collection) {
             return collection.length
+        },
+        include: function(opts) {
+            var context = {},
+                mergeContext = function(obj) {
+                    for(var k in obj) context[k]=obj[k]
+                };
+            mergeContext(this)
+            mergeContext(opts.hash)
+            return opts.fn(context)
+        },
+        if_equal: function(a, b, opts) {
+            if (a == b) {
+                return opts.fn(this)
+            } else {
+                return opts.inverse(this)
+            }
         }
     }
 

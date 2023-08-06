@@ -42,7 +42,12 @@ const postSchema = new mongoose.Schema({
         votes: {
             type: Number,
             default: 0
-        }}]
+        }}],
+    status: {
+        type: String,
+        enum: ['OK','Removed'],
+        default: 'OK'
+    }
 })
 
 module.exports = mongoose.model('Post', postSchema)

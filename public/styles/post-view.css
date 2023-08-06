@@ -364,3 +364,6 @@ img.comment-icons {
     padding: 5px; 
 }
 
+.edit, .delete {
+    cursor: pointer
+}

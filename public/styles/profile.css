@@ -165,7 +165,7 @@ button#login-btn:active {
     display: flex;
     justify-content: space-between;
 
-    margin: 1% 2% 0% 2%;
+    margin: 30px;
 }
 
 #hotbar {
@@ -222,7 +222,9 @@ button#login-btn:active {
 
 #content-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     margin-top: 5px;
     background-color: var(--clr-primary);
@@ -417,6 +419,7 @@ button#login-btn:active {
     padding-left: 5em;
     margin-top: 2px;
     margin-bottom: 5px;
+    color: var(--clr-text);
 
     font-weight: bold;
 }
@@ -585,6 +588,41 @@ img.post-icons {
     margin: 2px;
 }
 
-.post-comments {
+div.comment {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--clr-text);
+    background-color: var(--clr-accent2);
+}
+
+div#comment-info-cont {
+    margin: 0px;
+    color: var(--clr-text);
+    font-size: 14px;
+}
+
+div#comment-content-cont {
+    font-size: 15px;
+    padding: 5px;
+}
+
+div#comment-actions {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+img.comment-icons {
+    height: 30px;
+    width: auto;   
+    padding: 5px; 
+}
+
+.post-comments, .edit, .delete {
     cursor: pointer
 }

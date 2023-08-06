@@ -195,4 +195,30 @@ $(document).ready(function() {
                 })
         }
     })
+
+    // Listener for edit post button click
+    $(".edit").on("click", function() {
+        const ancestor_Element = $(this).parents()[2]
+        const postMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
+        window.location.href = `/posts/${postMongoDbId}/edit`
+    })
+
+    // Listener for delete post button double-click
+    $(".delete").click(function() {
+        const url = window.location.href
+        const ancestor_Element = $(this).parents()[2]
+
+        if (ancestor_Element.classList.contains("post")) {
+            const postMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
+            $.get(`/posts/${postMongoDbId}/delete`, (res) => {
+                if (res == "OK") { window.location.href = url }
+            })
+        } else {
+            const commentMongoDbId = ancestor_Element.getAttribute("dataMongodbId")
+            const postMongoDbId = $(this).parents()[4].children[0].getAttribute("dataMongodbId")
+            $.get(`/posts/${postMongoDbId}/${commentMongoDbId}/delete`, (res) => {
+                if (res == "OK") { window.location.href = url }
+            })
+        }
+    })
 });

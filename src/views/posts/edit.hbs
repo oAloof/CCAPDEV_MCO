@@ -52,12 +52,12 @@
             }
 
             if (forumboxHTMLobj.val() && titleboxHTMLobj.val() && textboxHTMLobj.val()) {
-                $.post("/posts/new", {
-                    forumbox: forumboxHTMLobj.val(),
-                    titlebox: titleboxHTMLobj.val(),
-                    textbox: textboxHTMLobj.val()
-                }, (data) => {
-                    if (data == "Success") {
+                $.post(window.location.href, {
+                    forum: forumboxHTMLobj.val(),
+                    title: titleboxHTMLobj.val(),
+                    content: textboxHTMLobj.val()
+                }, (res) => {
+                    if (res == "OK") {
                         window.location.href = document.referrer
                     }
                 })
@@ -81,24 +81,24 @@
 <div id="profile-body">
     <div id="profile-body-left">
         <div id="create-post-text">
-            Create a post
+            Edit a post
         </div>
         <div id="hr1">
             <hr>
         </div>
 
-        <form id="post-form">
+        <form id="post-form" action="/posts/{{post._id}}/edit" method="POST">
             <div id="choose-community">
                 <span id="choose-community-pic"></span>
-                <input type="text" name="forumbox" id="forumbox" placeholder="Forum">
+                <input type="text" name="forumbox" id="forumbox" value="{{ post.forum }}">
             </div>
             <div id="bottom-box">
                 <div id="hr2">
                     <hr>
                 </div>
-                    <input type="text" name="titlebox" id="titlebox" placeholder="Title">
+                    <input type="text" name="titlebox" id="titlebox" value="{{ post.title }}">
                     <br>
-                    <textarea type="text" name="textbox" id="textbox" rows = "5" cols = "50" placeholder="Text"></textarea>
+                    <textarea type="text" name="textbox" id="textbox" rows = "5" cols = "50">{{ post.content }}</textarea>
                     <div id="hr2">
                         <hr>
                     </div>
@@ -129,4 +129,3 @@
         </div>
     </div>
 </div>
-   

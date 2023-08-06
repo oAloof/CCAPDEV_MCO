@@ -63,6 +63,58 @@ router.post('/:id', async(req, res) => {
     }
 })
 
+router.get('/:id/edit', checkAuthenticated, async (req, res) => {
+    const post = await Post.findById(req.params.id).lean().exec()
+    res.render('posts/edit', {
+        layout: 'edit-post', 
+        user_auth: req.user.username,
+        post: post
+    })
+})
+
+router.post('/:id/edit', async (req, res) => { 
+    try {
+        await Post.findOneAndUpdate(
+            { _id: req.params.id },
+            { forum: req.body.forum,
+              title: req.body.title,
+              content: req.body.content }
+        )
+        res.send("OK")
+    } catch (e) {
+        console.log(e)
+    }
+})
+
+router.get('/:id/delete', async (req, res) => {
+    try {
+        await Post.findByIdAndUpdate(req.params.id, {
+            forum: "deleted",
+            title: "Post was removed.",
+            content: "None",
+            status: 'Removed'
+        })
+        // Remove post from user
+        req.user.posts.pull({_id:req.params.id})
+        req.user.save()
+        res.send("OK")
+    } catch (e) {
+        console.log(e)
+    }
+})
+
+router.get('/:id/:comment_id/delete', async (req, res) => {
+    try {
+        await Post.findByIdAndUpdate(req.params.id,
+            { $pull: { comments: { _id: req.params.comment_id } } })
+        req.user.comments.pull({_id:req.params.comment_id})
+        req.user.save()
+        res.send("OK")
+    } catch (e) {
+        console.log(e)
+    }
+})
+
 // Middleware for checking User authentication
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) { return next() }

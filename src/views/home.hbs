@@ -18,7 +18,9 @@
 
         <div id="posts-main-cont">
             {{#each posts}}
-                {{> post this}}
+                {{#include user_auth=../user_auth}}
+                    {{> post}}
+                {{/include}}
             {{/each}}
         </div>
     </div>
@@ -26,7 +28,7 @@
         <div id="right-main-cont">
             <div id="trending-topics-cont">
                 <div class="topic-title">
-                    <h4>Trending Topics</h4>
+                    <h4>Reminders:</h4>
                 </div>
                 Before using website, please populate the database by using the accompanying JSON files inside the db folder (src/db).
             </div>

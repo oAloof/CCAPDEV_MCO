@@ -3,10 +3,10 @@
         <a href="/" >
             <img id="logo" alt="Convo Logo" src="../../images/ConvoLogo2.png">
         </a>
-        <a href="/about">About</a>
+        <a href="/about" style="color: #f2f3cc;">About</a>
     </div>
     {{#if searchbar}}
-    <form name="searchForm" id="search-form" action="/" method="POST">
+    <form name="searchForm" id="search-form" action="/search" method="GET">
         <input type="text" name="search" id="search" placeholder="Search for post...">
         <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f2f3cc" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -15,7 +15,7 @@
     {{/if}}
     <div id="header-left">
         {{#if user_auth}}
-            <span>Welcome, <a href="/users/{{user_auth}}">{{user_auth}}</a>! <a href="/logout">Logout</a></span>
+            <span>Welcome, <a href="/users/{{user_auth}}" style="color: #f2f3cc;">{{user_auth}}</a>! <a href="/logout" style="color: #f2f3cc;">Logout</a></span>
         {{else}}
             <a id="link-register" href="/signup">Register</a>
             <span>or</span>
