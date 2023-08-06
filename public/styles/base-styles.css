@@ -84,6 +84,19 @@ header {
     min-height: 65px;
 }
 
+#header-right > a {
+    width: 220px;
+}
+
+#header-right {
+    float: right;
+    display: flex;
+}
+
+#header-left {
+    float: left;
+}
+
 #profile-subheader {
     box-sizing: border-box;
     display: flex;

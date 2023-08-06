@@ -3,7 +3,10 @@ const router = express.Router()
 const Post = require('../db/models/post.js')
 
 router.get('/new', checkAuthenticated, async (req, res) => {
-    res.render('posts/new', { layout: 'create-post' })
+    res.render('posts/new', { 
+        layout: 'create-post', 
+        user_auth: req.user.username 
+    })
 })
 
 router.post('/new', async (req, res) => {
@@ -12,7 +15,7 @@ router.post('/new', async (req, res) => {
         forum: req.body.forumbox,
         username: req.user.username || "Anonymous",
         title: req.body.titlebox,
-        content: req.body.textbox,
+        content: req.body.textbox
     })
 
     try {

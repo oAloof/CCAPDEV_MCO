@@ -58,7 +58,7 @@ a, a:link , a:visited {
 header {
     position: sticky;
     top: 0;
-    display: block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
@@ -68,6 +68,19 @@ header {
 
     min-width: 1300px;
     min-height: 65px;
+}
+
+#header-right > a {
+    width: 220px;
+}
+
+#header-right {
+    float: right;
+    display: flex;
+}
+
+#header-left {
+    float: left;
 }
 
 img#logo {
