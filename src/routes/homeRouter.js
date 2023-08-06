@@ -98,8 +98,32 @@ router.post('/signup', checkNotAuthenticated, async (req, res) => {
 })
 
 router.post('/upvote', async (req, res) => {
+
+
     // Check whether post or comment
     if (req.body.type === "post") {
+        // Add or remove post id from user posts array
+        if (req.body.votes == 1) {
+            req.user.upvoted_posts.push(req.body.postDataID)
+            req.user.save()
+        } else if (req.body.votes == -1) {
+            const indexToRemove = req.user.upvoted_posts.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.upvoted_posts.splice(indexToRemove, 1);
+                req.user.save()
+            }
+        } else if (req.body.votes == 2) {
+            // Votes being == 2 means the post was downvoted and now just got upvoted
+            // Remove post id from downvoted posts and add to upvoted posts
+            const indexToRemove = req.user.downvoted_posts.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.downvoted_posts.splice(indexToRemove, 1);
+            }
+            req.user.upvoted_posts.push(req.body.postDataID)
+            req.user.save()
+        }
         // Increment vote counter
         await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: req.body.votes }})
         // Retrieve the new vote count
@@ -140,6 +164,29 @@ router.post('/upvote', async (req, res) => {
 router.post('/downvote', async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
+        // Add or remove post id from user posts array
+        if (req.body.votes == -1) {
+            req.user.downvoted_posts.push(req.body.postDataID)
+            req.user.save()
+        } else if (req.body.votes == 1) {
+            const indexToRemove = req.user.downvoted_posts.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.downvoted_posts.splice(indexToRemove, 1);
+                req.user.save()
+            }
+        } else if (req.body.votes == -2) {
+            // Votes being == -2 means the post was upvoted and now just got downvoted
+            // Remove post id from upvoted posts and add to downvoted posts
+            const indexToRemove = req.user.upvoted_posts.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.upvoted_posts.splice(indexToRemove, 1);
+            }
+            req.user.downvoted_posts.push(req.body.postDataID)
+            req.user.save()
+        }
+
         // Increment vote counter
         await Post.findOneAndUpdate({_id: req.body.postDataID}, {$inc: { votes: req.body.votes }})
         // Retrieve the new vote count

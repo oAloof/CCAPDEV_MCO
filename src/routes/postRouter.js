@@ -49,7 +49,11 @@ router.post('/:id', async(req, res) => {
         const post = await Post.findByIdAndUpdate(req.params.id,
             { $push: {"comments": pushed_comment} },
             { returnDocument: "after" })
-            
+        
+        // Get the new comments' mongoDbID and add to user's comments array
+        const new_commentID = post.comments[post.comments.length - 1]._id
+        req.user.comments.push(new_commentID)
+        req.user.save()
         res.redirect('/posts/'+ req.params.id)
     } catch (e) {
         console.log(e)
