@@ -9,6 +9,9 @@ const User = require('../db/models/user.js')
 
 const router = express.Router()
 
+// Constant for About Page
+NPM_PACKAGES = ["@handlebars/allow-prototype-access","bcrypt","dotenv","ejs","express","express-flash","express-handlebars","express-session","mongoose","passport","passport-local","nodemon"]
+
 router.get('/', checkAuthenticated, async (req, res) => {
     const key = req.query.sort
     var param = {}
@@ -32,6 +35,7 @@ router.get('/', checkAuthenticated, async (req, res) => {
         .exec()
     res.render('home', {
         title: 'Convo - Homepage',
+        searchbar: true,
         posts: posts,
         user_auth: req.user.username
     })
@@ -52,6 +56,13 @@ router.post('/', async (req, res) => {
     res.render('home', {
         title: 'Convo - Homepage',
         posts: posts
+    })
+})
+
+router.get('/about', (req, res) => {
+    res.render('about', {
+        packages: NPM_PACKAGES,
+        user_auth: req.user.username
     })
 })
 
