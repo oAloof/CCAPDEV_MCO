@@ -47,7 +47,7 @@ $(document).ready(function() {
                 votes: votesToAdd
             }, (data) => {
                 // Update Vote Counter
-                htmlObject[0].innerText = data.votes
+                htmlObject[0].innerHTML = data.votes ?? htmlObject[0].innerHTML
             })
 
         } else {
@@ -92,7 +92,7 @@ $(document).ready(function() {
                 votes: votesToAdd
                 }, (data) => {
                     // Update Vote Counter
-                    htmlObject[0].innerHTML = data.votes
+                    htmlObject[0].innerHTML = data.votes ?? htmlObject[0].innerHTML
                 })
         } 
     })
@@ -146,7 +146,7 @@ $(document).ready(function() {
                 votes: votesToAdd
             }, (data) => {
                 // Update Vote Counter
-                htmlObject[0].innerText = data.votes
+                htmlObject[0].innerHTML = data.votes ?? htmlObject[0].innerHTML
             })
 
         } else {
@@ -191,7 +191,7 @@ $(document).ready(function() {
                 votes: votesToAdd
                 }, (data) => {
                     // Update Vote Counter
-                    htmlObject[0].innerHTML = data.votes
+                    htmlObject[0].innerHTML = data.votes ?? htmlObject[0].innerHTML
                 })
         }
     })

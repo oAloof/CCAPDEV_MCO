@@ -32,3 +32,11 @@ Main Features:
 4. To run server with nodemon, type `npm run devStart` in terminal. Otherwise, type `node server.js`.
 5. Open browser and navigate to `localhost:3000`.
 
+# List of Sample Users
+
+---
+1. Username: DarthVader | Password: darkside123
+2. Username: stormtrooper609 | Password: pewpewpew57
+3. Username: sanestGachaGam3r | Password: raidendeeznuts
+4. Username: Gacha4Life | Password: Broke4Life
+5. Username: hackerMan | Password: password

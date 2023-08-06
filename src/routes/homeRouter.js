@@ -14,7 +14,7 @@ NPM_PACKAGES = ["@handlebars/allow-prototype-access","bcrypt","dotenv","express"
 
 router.get('/', async (req, res) => {
     const key = req.query.sort
-    var param = {}
+    var param = {date: -1}
     if (key !== undefined) {
         switch (key) {
             case "new": 
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
                 param = {votes: -1}
                 break
             default: 
-                param = { _id: -1 }
+                param = {date: -1}
                 break
     }}
     const posts = await Post.find({})
@@ -113,7 +113,7 @@ router.post('/signup', checkNotAuthenticated, async (req, res) => {
     }  
 })
 
-router.post('/upvote', async (req, res) => {
+router.post('/upvote', checkAuthenticated, async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
         // Add or remove post id from user posts array
@@ -198,7 +198,7 @@ router.post('/upvote', async (req, res) => {
     }
 })
 
-router.post('/downvote', async (req, res) => {
+router.post('/downvote', checkAuthenticated, async (req, res) => {
     // Check whether post or comment
     if (req.body.type === "post") {
         // Add or remove post id from user posts array
