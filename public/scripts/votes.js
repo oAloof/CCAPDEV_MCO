@@ -5,6 +5,7 @@ $(document).ready(function() {
         
         const ancestor_Element = $(this).parents()[2]
         var votesToAdd = 0
+       
         // Check whether selected element is a post or a comment
         if (ancestor_Element.classList.contains("post")) {
             /* 

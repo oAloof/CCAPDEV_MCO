@@ -14,14 +14,14 @@ router.post('/new', async (req, res) => {
         title: req.body.titlebox,
         content: req.body.textbox,
     })
-
+    
     try {
         post = await post.save()
         // Add new post to user's posts array
         req.user.posts.push(post._id)
         req.user.save()
         // const posts = await Post.find({}).exec()
-        res.redirect('/')
+        res.send("Success")
     } catch (e) {
         console.log(e)
     }

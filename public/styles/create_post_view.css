@@ -95,8 +95,9 @@ img#logo {
 
 #profile-body {
     display: flex;
-    justify-content: space-between;
-    margin: 1% 2% 0% 2%;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 5%;
 }
 
 #hotbar {
@@ -141,10 +142,14 @@ img#logo {
 
 #profile-body-left {
     margin-left: 22em;
-    margin-right:2%;
+    margin-right:5%;
     font-weight: bold;
     min-width: 700px;
     max-width: 700px;
+}
+
+#profile-body-right {
+    margin-top: 90px;
 }
 
 button#login-btn {
@@ -651,9 +656,15 @@ a#link-register {
     border-width: 1px;
     padding: 1px 12px 1px 12px;
     margin-right: 5px;
-
 }
 
 #choose-community-text {
     font-size: 13px;
+}
+
+div.error-msg-cont {
+    display: flex;
+    min-width: 320px;
+    justify-content: center;
+    color: red;
 }
