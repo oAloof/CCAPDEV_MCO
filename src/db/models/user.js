@@ -4,14 +4,14 @@ const Post = require('./post.js')
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     usertag: {
         type: String,
         default: "New User"
 
     },
-    // TODO: Password encryption
     password: {
         type: String,
         required: true
@@ -27,6 +27,21 @@ const userSchema = new mongoose.Schema({
     posts: [{ 
         type: mongoose.Schema.Types.ObjectId,
         ref: Post
+    }],
+    comments: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+    }],
+    upvoted_comments: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+    }],
+    downvoted_comments: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+    }],
+    upvoted_posts: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+    }],
+    downvoted_posts: [{ 
+        type: mongoose.Schema.Types.ObjectId,
     }]
 }) 
 

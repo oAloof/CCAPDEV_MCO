@@ -77,6 +77,20 @@ header {
     border-bottom: 3px solid var(--clr-secondary);
 
     min-width: 1300px;
+    min-height: 65px;
+}
+
+#header-right > a {
+    width: 220px;
+}
+
+#header-right {
+    float: right;
+    display: flex;
+}
+
+#header-left {
+    float: left;
 }
 
 #profile-subheader {
@@ -151,7 +165,7 @@ button#login-btn:active {
     display: flex;
     justify-content: space-between;
 
-    margin: 1% 2% 0% 2%;
+    margin: 30px;
 }
 
 #hotbar {
@@ -208,7 +222,9 @@ button#login-btn:active {
 
 #content-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     margin-top: 5px;
     background-color: var(--clr-primary);
@@ -302,12 +318,14 @@ button#login-btn:active {
     background: linear-gradient(0deg, var(--clr-primary) 80%, var(--clr-accent1) 20%);
 }
 
-#trophy-box {
+#bio-box {
     margin-top: 10px;
     margin-right: 50px;
     min-width: 290px;
     max-width: 290px;
     min-height: 100px;
+    height: auto;
+    width: auto;
 
     padding-top: 3px;
     padding-left: 8px;
@@ -320,11 +338,18 @@ button#login-btn:active {
 
     display:flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#trophy-box {
-    margin: 10px 0px 0px 0px;
-    font-weight: bold;
+#bio {
+    font-weight: bolder;
+}
+
+#bio-cont {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
 }
 
 #user-profile {
@@ -394,6 +419,7 @@ button#login-btn:active {
     padding-left: 5em;
     margin-top: 2px;
     margin-bottom: 5px;
+    color: var(--clr-text);
 
     font-weight: bold;
 }
@@ -434,10 +460,6 @@ button#login-btn:active {
     margin-left: 50px;
 
     font-weight: bold;
-}
-
-#top-button:hover {
-    background-color: rgba(250, 235, 215, 0.836);
 }
 
 .hotbar-new {
@@ -566,6 +588,41 @@ img.post-icons {
     margin: 2px;
 }
 
-.post-comments {
+div.comment {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--clr-text);
+    background-color: var(--clr-accent2);
+}
+
+div#comment-info-cont {
+    margin: 0px;
+    color: var(--clr-text);
+    font-size: 14px;
+}
+
+div#comment-content-cont {
+    font-size: 15px;
+    padding: 5px;
+}
+
+div#comment-actions {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+img.comment-icons {
+    height: 30px;
+    width: auto;   
+    padding: 5px; 
+}
+
+.post-comments, .edit, .delete {
     cursor: pointer
 }

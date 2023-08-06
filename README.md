@@ -22,16 +22,21 @@ Main Features:
 13. Search
 14. General
 
-# Folder Structure
+# Local Setup
 
 ---
 
-**images/** - All images will be stored here <br>
-**pages/** - All HTML files will be stored here <br>
-**scripts/** - All JAVASCRIPT files will be stored here <br>
-**pages/** - All HTML files will be stored here <br>
-**styles/** - All CSS files will be stored here <br>
+1. Download all files as a zip and unzip.
+2. Open terminal and run `npm install`.
+3. Populate the database by importing the JSON files located inside the folder ./src/db using MongoDBCompass.
+4. To run server with nodemon, type `npm run devStart` in terminal. Otherwise, type `node server.js`.
+5. Open browser and navigate to `localhost:3000`.
 
-# Important Links
+# List of Sample Users
 
-1. **Main Docs File:** https://docs.google.com/document/d/1kkZrYKmXqz5BnkQKxI51wZFvWp_vx8zjT2wbdc16eQ8/edit?usp=sharing
+---
+1. Username: DarthVader | Password: darkside123
+2. Username: stormtrooper609 | Password: pewpewpew57
+3. Username: sanestGachaGam3r | Password: raidendeeznuts
+4. Username: Gacha4Life | Password: Broke4Life
+5. Username: hackerMan | Password: password

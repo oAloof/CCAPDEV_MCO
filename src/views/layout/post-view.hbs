@@ -21,18 +21,7 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <header>
-        <a href="/">
-            <img id="logo" alt="Convo Logo" src="../../images/ConvoLogo2.png">
-        </a>
-        <div id="div-for-layout"></div>
-        
-        <div>
-            <a id="link-register" href="/signup">Register</a>
-            <span>or</span>
-            <button class="btn btn-primary" id="login-btn" onclick="window.location.href='/login';">Login</button>
-        </div>
-    </header>
+    {{> header}}
     {{{ body }}}
 </body>
 </html>

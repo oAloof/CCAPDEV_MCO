@@ -80,6 +80,21 @@ header {
 
     background-color: var(--clr-primary);
     border-bottom: 2px solid var(--clr-text);
+
+    min-height: 65px;
+}
+
+#header-right > a {
+    width: 220px;
+}
+
+#header-right {
+    float: right;
+    display: flex;
+}
+
+#header-left {
+    float: left;
 }
 
 #profile-subheader {
@@ -399,7 +414,7 @@ div.topic-title {
     font-size: 16px;
 }
 
-.post-comments {
+.post-comments, .edit, .delete {
     cursor: pointer
 }
 

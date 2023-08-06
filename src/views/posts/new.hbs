@@ -1,3 +1,83 @@
+<script>
+    $(document).ready(() => {
+        $("#post-btn").on('click', (event) => {
+            event.preventDefault()
+
+            const forumboxHTMLobj = $("#forumbox")
+            const titleboxHTMLobj = $("#titlebox")
+            const textboxHTMLobj = $("#textbox")
+
+            // Check if inputs are empty
+            $(".error-msg-cont").remove()
+            if (!textboxHTMLobj.val()) {
+                 const new_content = `
+                                <div class='error-msg-cont textbox alert alert-danger d-flex align-items-center' role='alert'>
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='icon bi bi-x-circle-fill' viewBox='0 0 16 16'>
+                                        <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/>
+                                    </svg>
+                                    <div class='error-msg ms-2'>
+                                        Post must have content
+                                    </div>
+                                </div>
+                            `
+                $("#profile-body-left").prepend(new_content)
+            }
+
+            if (!titleboxHTMLobj.val()) {
+                 const new_content = `
+                                <div class='error-msg-cont titlebox alert alert-danger d-flex align-items-center' role='alert'>
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='icon bi bi-x-circle-fill' viewBox='0 0 16 16'>
+                                        <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/>
+                                    </svg>
+                                    <div class='error-msg ms-2'>
+                                        Post must have a title
+                                    </div>
+                                </div>
+                            `
+                $("#profile-body-left").prepend(new_content)
+            }
+
+            if (!forumboxHTMLobj.val()) {
+                 const new_content = `
+                                <div class='error-msg-cont forumbox alert alert-danger d-flex align-items-center' role='alert'>
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='icon bi bi-x-circle-fill' viewBox='0 0 16 16'>
+                                        <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z'/>
+                                    </svg>
+                                    <div class='error-msg ms-2'>
+                                        Post must have a forum
+                                    </div>
+                                </div>
+                            `
+                $("#profile-body-left").prepend(new_content)
+            }
+
+            if (forumboxHTMLobj.val() && titleboxHTMLobj.val() && textboxHTMLobj.val()) {
+                $.post("/posts/new", {
+                    forumbox: forumboxHTMLobj.val(),
+                    titlebox: titleboxHTMLobj.val(),
+                    textbox: textboxHTMLobj.val()
+                }, (data) => {
+                    if (data == "Success") {
+                        window.location.href = document.referrer
+                    }
+                })
+            }
+        })
+
+        $("#forumbox").on('keyup', () => {
+                $(".error-msg-cont.forumbox").remove()
+        })
+
+        $("#titlebox").on('keyup', () => {
+                $(".error-msg-cont.titlebox").remove()
+        })
+
+        $("#textbox").on('keyup', () => {
+                $(".error-msg-cont.textbox").remove()
+        })
+    })
+</script>
+
 <div id="profile-body">
     <div id="profile-body-left">
         <div id="create-post-text">
@@ -7,7 +87,7 @@
             <hr>
         </div>
 
-        <form id="post-form" action="new" method="POST">
+        <form id="post-form">
             <div id="choose-community">
                 <span id="choose-community-pic"></span>
                 <input type="text" name="forumbox" id="forumbox" placeholder="Forum">
@@ -18,11 +98,11 @@
                 </div>
                     <input type="text" name="titlebox" id="titlebox" placeholder="Title">
                     <br>
-                    <textarea type="text" name="textbox" id="textbox" rows = "4" cols = "50" placeholder="Text"></textarea>
+                    <textarea type="text" name="textbox" id="textbox" rows = "5" cols = "50" placeholder="Text"></textarea>
                     <div id="hr2">
                         <hr>
                     </div>
-                    <input type="submit" class="post pill right-align" value="Post">
+                    <input id="post-btn" type="submit" class="post pill right-align" value="Post">
             </div>
         </form>
     </div>

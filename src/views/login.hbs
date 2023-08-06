@@ -9,6 +9,33 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
+<script>
+    $(document).ready(() => {
+        // Fetch form that need validation
+        const forms = $(".needs-validation")
+
+        // Loop over forms and prevent submission
+        Array.from(forms).forEach((form) => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            })
+        })
+
+        $("#floatingUsername").on('click', () => {
+            $(".error-msg-cont").remove()
+        })
+
+        $("#floatingPassword").on('click', () => {
+            $(".error-msg-cont").remove()
+        })
+    })
+</script>
+
 <body>
     <div id="login-main-container">
         <div id="login-header">
@@ -18,15 +45,31 @@
             <p>Sign in to Your Account</p>
         </div>
         <div id="login-form-container">
-            <form action="/" method="post">
+                {{#if messages.error}}
+                    <div class="error-msg-cont alert alert-danger d-flex align-items-center" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                        </svg>
+                        <div class="error-msg ms-2">
+                            {{messages.error}}
+                        </div>
+                    </div>
+                {{/if}}
+            <form action="/login" method="post" class="needs-validation" novalidate>
             <div id="inputs-container">
                 <div class="form-floating mb-3">
-                    <input required type="text" class="form-control" id="floatingUsername" placeholder="Username">
+                    <input required type="text" class="form-control" name="username" id="floatingUsername" placeholder="Username">
                     <label for="floatingUsername">Username</label>
+                    <div class="invalid-feedback">
+                        Please provide a username.
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
-                    <input required type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input required type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
                     <label for="floatingPassword">Password</label>
+                    <div class="invalid-feedback">
+                        Please provide a password.
+                    </div>
                     <div id="forgot-pw-cont">
                         <a href="#" class="text-decoration-none" id="forgot-pw">Forgot password?</a>
                     </div>

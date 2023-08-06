@@ -5,33 +5,12 @@
         <link rel="stylesheet" href="../bootstrap-5.3.0-dist/css/bootstrap.css">
         <link rel="stylesheet" href="../styles/profile.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../scripts/votes.js"></script>
 
         <title>{{ username }}'s Profile</title>
     </head>
     <body>
-        <header>
-            <a href="/">
-                <img id="logo" src="../images/ConvoLogo2.png">
-            </a>
-            <div id="div-for-layout"></div>
-            <div>
-                <a id="link-register" href="/signup">Register</a>
-                <span>or</span>
-                <button class="btn btn-primary" id="login-btn" onclick="window.location.href='/login';">Login</button>
-            </div>
-        </header>
-        <div id="profile-subheader">
-            <div id="profile-subheader-buttons">
-                <span class="sh-button">OVERVIEW</span>
-                <span class="sh-button">POSTS</span>
-                <span class="sh-button">COMMENTS</span>
-                <span class="sh-button">HISTORY</span>
-                <span class="sh-button">SAVED</span>
-                <span class="sh-button">HIDDEN</span>
-                <span class="sh-button">UPVOTED</span>
-                <span class="sh-button">DOWNVOTED</span>
-            </div>
-        </div>
+        {{> header}}
         {{{ body }}}
     </body>
 </html>
