@@ -98,8 +98,6 @@ router.post('/signup', checkNotAuthenticated, async (req, res) => {
 })
 
 router.post('/upvote', async (req, res) => {
-
-
     // Check whether post or comment
     if (req.body.type === "post") {
         // Add or remove post id from user posts array
@@ -138,6 +136,29 @@ router.post('/upvote', async (req, res) => {
          // Send data back to client
          res.send({votes: newVote_count})
     } else {
+        // Add or remove comment id from user comments array
+        if (req.body.votes == 1) {
+            req.user.upvoted_comments.push(req.body.postDataID)
+            req.user.save()
+        } else if (req.body.votes == -1) {
+            const indexToRemove = req.user.upvoted_comments.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.upvoted_comments.splice(indexToRemove, 1);
+                req.user.save()
+            }
+        } else if (req.body.votes == 2) {
+            // Votes being == 2 means the comment was downvoted and now just got upvoted
+            // Remove comment id from downvoted comments and add to upvoted comments
+            const indexToRemove = req.user.downvoted_comments.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.downvoted_comments.splice(indexToRemove, 1);
+            }
+            req.user.upvoted_comments.push(req.body.postDataID)
+            req.user.save()
+        }
+
         // Increment vote counter
         await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
         {$inc: { "comments.$.votes": req.body.votes }})
@@ -201,6 +222,29 @@ router.post('/downvote', async (req, res) => {
          // Send data back to client
          res.send({votes: newVote_count})
     } else {
+        // Add or remove comment id from user comments array
+        if (req.body.votes == -1) {
+            req.user.downvoted_comments.push(req.body.postDataID)
+            req.user.save()
+        } else if (req.body.votes == 1) {
+            const indexToRemove = req.user.downvoted_comments.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.downvoted_comments.splice(indexToRemove, 1);
+                req.user.save()
+            }
+        } else if (req.body.votes == -2) {
+            // Votes being == -2 means the comment was upvoted and now just got downvoted
+            // Remove comment id from upvoted comments and add to downvoted comments
+            const indexToRemove = req.user.upvoted_comments.findIndex(obj => obj._id == req.body.postDataID);
+            // If the object with the given id exists in the array, remove it
+            if (indexToRemove != -1) {
+                req.user.upvoted_comments.splice(indexToRemove, 1);
+            }
+            req.user.downvoted_comments.push(req.body.postDataID)
+            req.user.save()
+        }
+
         // Increment vote counter
         await Post.updateOne({_id: req.body.postDataID, "comments._id": req.body.commentDataID}, 
         {$inc: { "comments.$.votes": req.body.votes }})
