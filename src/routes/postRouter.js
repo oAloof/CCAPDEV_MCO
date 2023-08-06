@@ -6,8 +6,7 @@ router.get('/new', checkAuthenticated, async (req, res) => {
     res.render('posts/new', { layout: 'create-post' })
 })
 
-router.post('/new', async (req, res) => {
-    
+router.post('/new', async (req, res) => { 
     let post = new Post({
         forum: req.body.forumbox,
         username: req.user.username || "Anonymous",
